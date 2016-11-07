@@ -127,11 +127,11 @@
         });
 
         function loadComment() {
-            console.log(uyan_config)
+            //console.log(uyan_config)
             var div = document.getElementById('commentDiv');
             var oScript = document.createElement("script");
             oScript.type = "text/javascript";
-            oScript.src = "http://v2.uyan.cc/code/uyan.js?date=" + new Date().getMilliseconds();
+            oScript.src = "js/uyan.js?data=" + new Date().getMilliseconds();
             div.appendChild(oScript);
             //console.log(new Date().getMilliseconds())
             //$("#commentJs").attr('src', 'http://v2.uyan.cc/code/uyan.js');
