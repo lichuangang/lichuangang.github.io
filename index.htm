@@ -58,10 +58,10 @@
             </div>
             <!-- UY BEGIN -->
             <div style="padding:10px" id="uyan_frame"></div>
+            <script type="text/javascript" src="js/uyan.js"></script>
             <!-- UY END -->
         </div>
     </div>
-    <script id="commentJs" type="text/javascript" src=""></script>
     <!-- html -->
     <div class="ui-dialog">
         <div class="ui-dialog-cnt">
@@ -118,12 +118,12 @@
                     this.thisPage = 3;
                 }
             },
-            updated: function () {
-                if (uyan_config.update && this.thisPage == 3) {
-                    uyan_config.update = false;
-                    loadComment();
-                }
-            }
+            //updated: function () {
+            //    if (uyan_config.update && this.thisPage == 3) {
+            //        uyan_config.update = false;
+            //        //loadComment();
+            //    }
+            //}
         });
 
         function loadComment() {
