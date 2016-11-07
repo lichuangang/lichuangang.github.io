@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>重庆求职防坑手册</title>
+    <link rel="stylesheet" href="css/frozenui/css/frozen.css" />
+</head>
+<body>
+    <div id="app">
+        <div v-if="thisPage==1">
+            <div class="ui-row-flex ui-whitespace">
+                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-add" onclick="openEmail()"></i></div>
+                <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>重庆求职防坑手册</h1> </div>
+                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-share"></i></div>
+            </div>
+            <ul class="ui-list ui-list-text ui-list-link ui-border-tb">
+                <li v-for="(item,index) in companys" class="ui-border-t">
+                    <h4 v-on:click="itemClick(index)">{{item.name}}</h4>
+                </li>
+            </ul>
+        </div>
+        <div v-else>
+            <div class="ui-row-flex ui-whitespace">
+                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-return" v-on:click="returnIndex"></i></div>
+                <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>{{entity.name}}</h1> </div>
+                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-share"></i></div>
+            </div>
+            <div class="ui-whitespace">
+                <p class="ui-txt-justify">{{entity.desc}}</p>
+                <div class="ui-flex ui-flex-align-end">
+                    地址：{{entity.address}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- html -->
+    <div class="ui-dialog">
+        <div class="ui-dialog-cnt">
+            <div class="ui-dialog-bd">
+                <div>
+                    <h4>欢迎投稿</h4>
+                    <div>
+                        <a href="lcgang1988@163.com">lcgang1988@163.com</a>
+                    </div>
+                </div>
+            </div>
+            <div class="ui-dialog-ft ui-btn-group">
+                <button type="button" data-role="button" class="select" onclick="closeEmail()">关闭</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 引入 JS -->
+    <script src="js/zepto.min.js"></script>
+    <script src="js/frozen.js"></script>
+    <script src="js/vuejs/vue.min.js"></script>
+    <script src="js/data.js"></script>
+    <script type="text/javascript">
+        var myApp = new Vue({
+            el: "#app",
+            data: {
+                companys: companys,
+                thisPage: 1,
+                entity: { name: '', address: '', desc: '' }
+            },
+            methods: {
+                itemClick: function (index) {
+                    this.thisPage = 2;
+                    this.entity = this.companys[index];
+                },
+                returnIndex: function () {
+                    this.thisPage = 1;
+                }
+            }
+        });
+
+        function openEmail() {
+            var dia2 = $(".ui-dialog").dialog("show");
+        }
+
+        function closeEmail() {
+            var dia2 = $(".ui-dialog").dialog("hide");
+        }
+    </script>
+</body>
+</html>
