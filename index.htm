@@ -12,19 +12,25 @@
             <div class="ui-row-flex ui-whitespace">
                 <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-add" onclick="openEmail()"></i></div>
                 <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>重庆求职防坑手册</h1> </div>
-                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-share"></i></div>
+                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-news" v-on:click="comment(0)"></i></div>
             </div>
+            <!--<div class="ui-searchbar-wrap ui-border-b">
+                <div class="ui-searchbar ui-border-radius ui-flex-pack-start">
+                    <i class="ui-icon-search ui-flex-pack-start"></i>
+                    <input value="" type="text" placeholder="请输入公司名称" v-model="searchQuery" autocapitalize="off">
+                </div>
+            </div>-->
             <ul class="ui-list ui-list-text ui-list-link ui-border-tb">
-                <li v-for="(item,index) in companys" class="ui-border-t">
+                <li v-for="(item,index) in companys" class="ui-list-cover" style="cursor:pointer">
                     <h4 v-on:click="itemClick(index)">{{item.name}}</h4>
                 </li>
             </ul>
         </div>
-        <div v-else>
+        <div v-if="thisPage==2">
             <div class="ui-row-flex ui-whitespace">
                 <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-return" v-on:click="returnIndex"></i></div>
                 <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>{{entity.name}}</h1> </div>
-                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-share"></i></div>
+                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-news" v-on:click="comment(1)"></i></div>
             </div>
             <div class="ui-whitespace">
                 <p class="ui-txt-justify">{{entity.desc}}</p>
@@ -33,8 +39,29 @@
                 </div>
             </div>
         </div>
+        <script type="text/javascript">
+            var uyan_config = {
+                'title': '重庆求职防坑手册',
+                'url': 'https://lichuangang.github.io/',
+                'pic': '',
+                'vid': '',
+                'du': '',
+                'su': 'demo',
+                'update': true
+            };
+        </script>
+        <div v-show="thisPage==3" id="commentDiv">
+            <div class="ui-row-flex ui-whitespace">
+                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-return" v-on:click="returnIndex"></i></div>
+                <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>讨论区</h1> </div>
+                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"></div>
+            </div>
+            <!-- UY BEGIN -->
+            <div style="padding:10px" id="uyan_frame"></div>
+            <!-- UY END -->
+        </div>
     </div>
-
+    <script id="commentJs" type="text/javascript" src=""></script>
     <!-- html -->
     <div class="ui-dialog">
         <div class="ui-dialog-cnt">
@@ -61,9 +88,11 @@
         var myApp = new Vue({
             el: "#app",
             data: {
+                searchQuery: '',
                 companys: companys,
                 thisPage: 1,
-                entity: { name: '', address: '', desc: '' }
+                entity: { id: 0, name: '', address: '', desc: '' },
+                updateComment: false
             },
             methods: {
                 itemClick: function (index) {
@@ -72,9 +101,41 @@
                 },
                 returnIndex: function () {
                     this.thisPage = 1;
+                },
+                comment: function (index) {
+                    //if (index == 0) {
+                    //    if (uyan_config.su != 'demo') {
+                    //        uyan_config.update = true;
+                    //    }
+                    //    uyan_config.su = 'demo';
+                    //}
+                    //else {
+                    //    if (uyan_config.su != ('demo_' + this.entity.id)) {
+                    //        uyan_config.update = true;
+                    //    }
+                    //    uyan_config.su = 'demo_' + this.entity.id;
+                    //}
+                    this.thisPage = 3;
+                }
+            },
+            updated: function () {
+                if (uyan_config.update && this.thisPage == 3) {
+                    uyan_config.update = false;
+                    loadComment();
                 }
             }
         });
+
+        function loadComment() {
+            console.log(uyan_config)
+            var div = document.getElementById('commentDiv');
+            var oScript = document.createElement("script");
+            oScript.type = "text/javascript";
+            oScript.src = "http://v2.uyan.cc/code/uyan.js?date=" + new Date().getMilliseconds();
+            div.appendChild(oScript);
+            //console.log(new Date().getMilliseconds())
+            //$("#commentJs").attr('src', 'http://v2.uyan.cc/code/uyan.js');
+        }
 
         function openEmail() {
             var dia2 = $(".ui-dialog").dialog("show");
