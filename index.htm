@@ -11,7 +11,7 @@
         <div v-if="thisPage==1">
             <div class="ui-row-flex ui-whitespace">
                 <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-add" onclick="openEmail()"></i></div>
-                <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>重庆求职防坑手册</h1> </div>
+                <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1 v-on:click="switchCompany" style="cursor:pointer">{{isGoodCompany==false?'重庆求职防坑手册&nbsp;▼':'重庆求职推荐手册&nbsp;▼'}}</h1> </div>
                 <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-news" v-on:click="comment(0)"></i></div>
             </div>
             <!--<div class="ui-searchbar-wrap ui-border-b">
@@ -58,10 +58,10 @@
             </div>
             <!-- UY BEGIN -->
             <div style="padding:10px" id="uyan_frame"></div>
-            <script type="text/javascript" src="js/uyan.js?uid=2118734"></script>
             <!-- UY END -->
         </div>
     </div>
+    <script id="commentJs" type="text/javascript" src=""></script>
     <!-- html -->
     <div class="ui-dialog">
         <div class="ui-dialog-cnt">
@@ -89,12 +89,21 @@
             el: "#app",
             data: {
                 searchQuery: '',
+                isGoodCompany:false,
                 companys: companys,
                 thisPage: 1,
                 entity: { id: 0, name: '', address: '', desc: '' },
                 updateComment: false
             },
             methods: {
+                switchCompany: function () {
+                    this.isGoodCompany = !this.isGoodCompany;
+                    if (this.isGoodCompany) {
+                        this.companys = goodCompanys;
+                    } else {
+                        this.companys = companys;
+                    }
+                },
                 itemClick: function (index) {
                     this.thisPage = 2;
                     this.entity = this.companys[index];
@@ -102,36 +111,24 @@
                 returnIndex: function () {
                     this.thisPage = 1;
                 },
-                comment: function (index) {
-                    //if (index == 0) {
-                    //    if (uyan_config.su != 'demo') {
-                    //        uyan_config.update = true;
-                    //    }
-                    //    uyan_config.su = 'demo';
-                    //}
-                    //else {
-                    //    if (uyan_config.su != ('demo_' + this.entity.id)) {
-                    //        uyan_config.update = true;
-                    //    }
-                    //    uyan_config.su = 'demo_' + this.entity.id;
-                    //}
+                comment: function (index) {                    
                     this.thisPage = 3;
                 }
             },
-            //updated: function () {
-            //    if (uyan_config.update && this.thisPage == 3) {
-            //        uyan_config.update = false;
-            //        //loadComment();
-            //    }
-            //}
+            updated: function () {
+                if (uyan_config.update && this.thisPage == 3) {
+                    uyan_config.update = false;
+                    loadComment();
+                }
+            }
         });
 
         function loadComment() {
-            //console.log(uyan_config)
+            console.log(uyan_config)
             var div = document.getElementById('commentDiv');
             var oScript = document.createElement("script");
             oScript.type = "text/javascript";
-            oScript.src = "js/uyan.js?data=" + new Date().getMilliseconds();
+            oScript.src = "http://v2.uyan.cc/code/uyan.js?date=" + new Date().getMilliseconds();
             div.appendChild(oScript);
             //console.log(new Date().getMilliseconds())
             //$("#commentJs").attr('src', 'http://v2.uyan.cc/code/uyan.js');
