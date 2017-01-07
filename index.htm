@@ -5,143 +5,291 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
     <title>重庆求职防坑手册</title>
     <link rel="shortcut icon" href="img/main.jpg" type="image/x-icon">
-    <link rel="stylesheet" href="css/frozenui/css/frozen.css" />
+    <link rel="stylesheet" href="css/frozenui/css/frozen.css"/>
+    <script src="js/data.js"></script>
 </head>
 <body>
-    <div id="app">
-        <div v-if="thisPage==1">
-            <div class="ui-row-flex ui-whitespace">
-                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-add" onclick="openEmail()"></i></div>
-                <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1 v-on:click="switchCompany" style="cursor:pointer">{{isGoodCompany==false?'重庆求职防坑手册&nbsp;▼':'重庆求职推荐手册&nbsp;▼'}}</h1> </div>
-                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-news" v-on:click="comment(0)"></i></div>
+<div id="app">
+    <div v-if="thisPage==1">
+        <div class="ui-row-flex ui-whitespace">
+            <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><a href="create.htm"><i class="ui-icon-add" onclick="openEmail()"></i></a>
             </div>
-            <!--<div class="ui-searchbar-wrap ui-border-b">
-                <div class="ui-searchbar ui-border-radius ui-flex-pack-start">
-                    <i class="ui-icon-search ui-flex-pack-start"></i>
-                    <input value="" type="text" placeholder="请输入公司名称" v-model="searchQuery" autocapitalize="off">
-                </div>
-            </div>-->
-            <ul class="ui-list ui-list-text ui-list-link ui-border-tb">
-                <li v-for="(item,index) in companys" class="ui-list-cover" style="cursor:pointer">
-                    <h4 v-on:click="itemClick(index)">{{item.name}}</h4>
-                </li>
-            </ul>
-        </div>
-        <div v-if="thisPage==2">
-            <div class="ui-row-flex ui-whitespace">
-                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-return" v-on:click="returnIndex"></i></div>
-                <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>{{entity.name}}</h1> </div>
-                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-news" v-on:click="comment(1)"></i></div>
-            </div>
-            <div class="ui-whitespace">
-                <p class="ui-txt-justify">{{entity.desc}}</p>
-                <div class="ui-flex ui-flex-align-end">
-                    地址：{{entity.address}}
-                </div>
+            <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1 v-on:click="switchCompany"
+                                                                                              style="cursor:pointer">
+                {{isGoodCompany==false?'坑爹公司榜单&nbsp;▼':'福利公司榜单&nbsp;▼'}}</h1></div>
+            <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end">
+                <!--<i class="ui-icon-news" v-on:click="comment(0)"></i>-->
             </div>
         </div>
-        <script type="text/javascript">
-            var uyan_config = {
-                'title': '重庆求职防坑手册',
-                'url': 'https://lichuangang.github.io/',
-                'pic': '',
-                'vid': '',
-                'du': '',
-                'su': 'demo',
-                'update': true
-            };
-        </script>
-        <div v-show="thisPage==3" id="commentDiv">
-            <div class="ui-row-flex ui-whitespace">
-                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-return" v-on:click="returnIndex"></i></div>
-                <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>讨论区</h1> </div>
-                <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"></div>
+        <!--<div class="ui-searchbar-wrap ui-border-b">
+            <div class="ui-searchbar ui-border-radius ui-flex-pack-start">
+                <i class="ui-icon-search ui-flex-pack-start"></i>
+                <input value="" type="text" placeholder="请输入公司名称" v-model="searchQuery" autocapitalize="off">
             </div>
-            <!-- UY BEGIN -->
-            <div style="padding:10px" id="uyan_frame"></div>
-            <!-- UY END -->
+        </div>-->
+        <ul class="ui-list ui-list-text ui-list-link ui-border-tb">
+            <li v-for="(item,index) in companys" class="ui-list-cover" style="cursor:pointer">
+                <h4 v-on:click="itemClick(index)">
+                    <div class="ui-badge">{{item.agree}}</div>
+                    <b>{{item.name}}</b>
+                    <div style="color:grey;font-size: 12px;">{{item.desc}}</div>
+                </h4>
+            </li>
+        </ul>
+    </div>
+    <div v-if="thisPage==2">
+        <div class="ui-row-flex ui-whitespace">
+            <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-return"
+                                                                       v-on:click="returnIndex"></i></div>
+            <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>{{entity.name}}</h1></div>
+            <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"><i class="ui-icon-news" v-on:click="comment(1)"></i>
+            </div>
+        </div>
+        <div class="ui-whitespace">
+            <p class="ui-txt-justify">{{entity.desc}}</p>
+            <div class="ui-flex ui-flex-align-end">
+                地址：{{entity.address}}
+            </div>
+            <div style="margin-top: 15px;" class="ui-btn-group ui-btn-group-bottom">
+                <!--<button type="button" class="ui-btn-lg" onclick="commentBy(0,false)">
+                    扯蛋({{ungree}})
+                </button>-->
+                <button type="button" class="ui-btn-lg ui-btn-danger" onclick="commentBy(0,true)">
+                    赞同({{entity.agree}})
+                </button>
+                <button type="button" class="ui-btn-lg ui-btn-primary" onclick="openComment()">
+                    评论
+                </button>
+            </div>
+            <div style="margin-top: 15px;">
+                <ul class="ui-list ui-list-function ui-border-tb">
+                    <li v-for="(item,index) in comments">
+                        <div class="ui-list-info ui-border-t">
+                            <h4>{{item.content}}</h4>
+                            <div style="color:grey;font-size:8px;margin-top: 4px;">{{item.create_ip}}</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
-    <script id="commentJs" type="text/javascript" src=""></script>
-    <!-- html -->
-    <div class="ui-dialog">
-        <div class="ui-dialog-cnt">
-            <div class="ui-dialog-bd">
-                <div>
-                    <h4>欢迎投稿</h4>
-                    <div>
-                        <a href="lcgang1988@163.com">lcgang1988@163.com</a>
+    <div v-show="thisPage==3" id="commentDiv">
+        <div class="ui-row-flex ui-whitespace">
+            <div class="ui-col ui-col-1 ui-flex ui-flex-pack-start"><i class="ui-icon-return"
+                                                                       v-on:click="returnIndex"></i></div>
+            <div class="ui-col ui-col-3 ui-flex ui-flex-pack-center ui-flex-align-center"><h1>讨论区</h1></div>
+            <div class="ui-col ui-col-1 ui-flex ui-flex-pack-end"></div>
+        </div>
+        <!-- UY BEGIN -->
+        <div style="padding:10px" id="uyan_frame"></div>
+        <!-- UY END -->
+    </div>
+</div>
+<!-- html -->
+<div id="createDialog" class="ui-dialog">
+    <div class="ui-dialog-cnt" style="width:80%">
+        <div class="ui-dialog-bd">
+            <div class="ui-form">
+                <form action="#">
+                    <div class="ui-form-item ui-border-b">
+                        <label for="#">
+                            公司名称
+                        </label>
+                        <input type="text" placeholder="请输入公司名称">
                     </div>
-                </div>
-            </div>
-            <div class="ui-dialog-ft ui-btn-group">
-                <button type="button" data-role="button" class="select" onclick="closeEmail()">关闭</button>
+                    <div class="ui-form-item ui-border-b">
+                        <div id="typeDiv">
+                            <label class="ui-checkbox ui-checkbox-s">垃圾公司
+                                <input type="checkbox" name="checkbox" v-model="entity.isGood">
+                            </label>
+                            <label class="ui-checkbox ui-checkbox-s">福利公司
+                                <input type="checkbox" name="checkbox" v-model="!entity.isGood">
+                            </label>
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
+        <div class="ui-dialog-ft ui-btn-group">
+            <button type="button" data-role="button" class="select" onclick="saveCompany()">保存</button>
+            <button type="button" data-role="button" class="select" onclick="closeEmail()">关闭</button>
+        </div>
     </div>
+</div>
 
-    <!-- 引入 JS -->
-    <script src="js/zepto.min.js"></script>
-    <script src="js/frozen.js"></script>
-    <script src="js/vuejs/vue.min.js"></script>
-    <script src="js/data.js"></script>
-    <script type="text/javascript">
-        var myApp = new Vue({
-            el: "#app",
-            data: {
-                searchQuery: '',
-                isGoodCompany:false,
-                companys: companys,
-                thisPage: 1,
-                entity: { id: 0, name: '', address: '', desc: '' },
-                updateComment: false
-            },
-            methods: {
-                switchCompany: function () {
-                    this.isGoodCompany = !this.isGoodCompany;
-                    if (this.isGoodCompany) {
-                        this.companys = goodCompanys;
-                    } else {
-                        this.companys = companys;
-                    }
-                },
-                itemClick: function (index) {
-                    this.thisPage = 2;
-                    this.entity = this.companys[index];
-                },
-                returnIndex: function () {
-                    this.thisPage = 1;
-                },
-                comment: function (index) {                    
-                    this.thisPage = 3;
+<div id="alertDialog" class="ui-dialog">
+    <div class="ui-dialog-cnt">
+        <div class="ui-dialog-bd">
+            <div>
+                <h4><b>提示！</b></h4>
+                <div id="alertMsg">
+
+                </div>
+            </div>
+        </div>
+        <div class="ui-dialog-ft ui-btn-group">
+            <button type="button" data-role="button" class="select" onclick="$('#alertDialog').dialog('hide');">关闭
+            </button>
+        </div>
+    </div>
+</div>
+
+<div id="commentDialog" class="ui-dialog">
+    <div class="ui-dialog-cnt">
+        <div class="ui-dialog-bd">
+            <div>
+                <textarea id="commentTxt" style="width:100%" rows="3" placeholder="请输入评论"></textarea>
+            </div>
+        </div>
+        <div class="ui-dialog-ft ui-btn-group">
+            <button type="button" data-role="button" class="select" onclick="saveComment()">发表</button>
+            <button type="button" data-role="button" class="select" onclick="closeComment()">关闭</button>
+        </div>
+    </div>
+</div>
+
+<!-- 引入 JS -->
+<script src="js/zepto.min.js"></script>
+<script src="js/frozen.js"></script>
+<script src="js/vuejs/vue.min.js"></script>
+<script src="js/data.js"></script>
+<script type="text/javascript">
+    var baseUrl = "http://35.162.53.147:8080/";
+
+
+    var myApp = new Vue({
+        el: "#app",
+        data: {
+            searchQuery: '',
+            isGoodCompany: false,
+            companys: companys,
+            comments: comment,
+            agree: 0,
+            ungree: 0,
+            thisPage: 1,
+            entity: {id: 0, name: '', address: '', desc: ''},
+            updateComment: false
+        },
+        methods: {
+            switchCompany: function () {
+                this.isGoodCompany = !this.isGoodCompany;
+                if (this.isGoodCompany) {
+                    this.companys = goodCompanys;
+                } else {
+                    this.companys = companys;
                 }
             },
-            updated: function () {
-                if (uyan_config.update && this.thisPage == 3) {
-                    uyan_config.update = false;
-                    loadComment();
+            itemClick: function (index) {
+                this.thisPage = 2;
+                this.entity = this.companys[index];
+                this.comments = [];
+                //加载评论
+                loadComment(this.entity.id);
+            },
+            returnIndex: function () {
+                this.thisPage = 1;
+            },
+            comment: function (index) {
+                this.thisPage = 3;
+            }
+        },
+        updated: function () {
+
+        }
+    });
+
+    $(function () {
+        $.get(baseUrl + 'company/list', function (result) {
+            //console.log(result)
+            myApp.companys = result.data.bad;
+            companys = result.data.bad;
+            goodCompanys = result.data.good;
+            schools = result.data.school;
+        })
+    })
+
+    function saveCompany() {
+        console.log(myApp.newEntity)
+    }
+
+
+    function loadComment(id) {
+        var url = baseUrl + 'comment?id=' + id;
+        $.get(url, function (r) {
+            myApp.comments = r.data;
+        });
+    }
+
+    function openEmail() {
+        var dia2 = $("#createDialog").dialog("show");
+    }
+    function closeEmail() {
+        var dia2 = $("#createDialog").dialog("hide");
+    }
+
+    function openComment() {
+        var dia2 = $("#commentDialog").dialog("show");
+    }
+    function closeComment() {
+        $("#commentDialog").dialog("hide");
+    }
+
+    function saveComment() {
+        var txt = $("#commentTxt").val();
+        if (txt != "") {
+            commentByMsg(txt);
+        }
+    }
+
+    function alert(msg) {
+        $("#alertMsg").html(msg);
+        $("#alertDialog").dialog("show");
+    }
+
+    function commentByMsg(msg) {
+        var url = baseUrl + "info";
+        var req = {
+            "content": msg,
+            "targetId": myApp.entity.id,
+            "type": 0
+        };
+
+        ajaxPost(url, req, function (data) {
+            closeComment();
+            myApp.comments = data;
+        });
+    }
+
+    function commentBy(type, isDigg) {
+        var url = baseUrl + "info";
+        var req = {
+            "isDigg": isDigg,
+            "targetId": myApp.entity.id,
+            "type": type
+        };
+
+        ajaxPost(url, req, function (data) {
+            myApp.entity.agree=myApp.entity.agree+1;
+        });
+    }
+
+    function ajaxPost(url, data, successFunc) {
+        $.ajax({
+            url: url,
+            type: 'POST',// 必须是POST
+            contentType: 'application/json; charset=UTF-8',
+            data: JSON.stringify(data),// 数据 必须是字符串
+            dataType: 'json',// 期望返回类型 json, xml
+            processData: false,// 防止 data 被预处理
+            success: function (r) {
+                if (r.success) {
+                    successFunc(r.data);
+                } else {
+                    alert(r.msg)
                 }
             }
         });
-
-        function loadComment() {
-            console.log(uyan_config)
-            var div = document.getElementById('commentDiv');
-            var oScript = document.createElement("script");
-            oScript.type = "text/javascript";
-            oScript.src = "http://v2.uyan.cc/code/uyan.js?date=" + new Date().getMilliseconds();
-            div.appendChild(oScript);
-            //console.log(new Date().getMilliseconds())
-            //$("#commentJs").attr('src', 'http://v2.uyan.cc/code/uyan.js');
-        }
-
-        function openEmail() {
-            var dia2 = $(".ui-dialog").dialog("show");
-        }
-
-        function closeEmail() {
-            var dia2 = $(".ui-dialog").dialog("hide");
-        }
-    </script>
+    }
+</script>
 </body>
 </html>
