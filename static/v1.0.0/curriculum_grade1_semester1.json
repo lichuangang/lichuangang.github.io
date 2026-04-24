@@ -1,0 +1,3429 @@
+{
+  "version": "3.0.0",
+  "grade": 1,
+  "semester": 1,
+  "courses": [
+    {
+      "id": "g1s_c1",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 1,
+      "title": "识字1",
+      "subtitle": "天地人",
+      "charIds": [
+        "g1s_001",
+        "g1s_002",
+        "g1s_003",
+        "g1s_004",
+        "g1s_005",
+        "g1s_006"
+      ]
+    },
+    {
+      "id": "g1s_c2",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 2,
+      "title": "识字2",
+      "subtitle": "金木水火土",
+      "charIds": [
+        "g1s_007",
+        "g1s_008",
+        "g1s_009",
+        "g1s_010",
+        "g1s_011"
+      ]
+    },
+    {
+      "id": "g1s_c3",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 3,
+      "title": "识字3",
+      "subtitle": "口耳目",
+      "charIds": [
+        "g1s_012",
+        "g1s_013",
+        "g1s_014",
+        "g1s_015",
+        "g1s_016"
+      ]
+    },
+    {
+      "id": "g1s_c4",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 4,
+      "title": "识字4",
+      "subtitle": "日月水火",
+      "charIds": [
+        "g1s_017",
+        "g1s_018",
+        "g1s_019",
+        "g1s_020"
+      ]
+    },
+    {
+      "id": "g1s_c5",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 5,
+      "title": "识字5",
+      "subtitle": "对韵歌",
+      "charIds": [
+        "g1s_021",
+        "g1s_022",
+        "g1s_023",
+        "g1s_024",
+        "g1s_025"
+      ]
+    },
+    {
+      "id": "g1s_c6",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 6,
+      "title": "课文1",
+      "subtitle": "秋天",
+      "charIds": [
+        "g1s_026",
+        "g1s_027",
+        "g1s_028",
+        "g1s_029",
+        "g1s_030"
+      ]
+    },
+    {
+      "id": "g1s_c7",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 7,
+      "title": "课文2",
+      "subtitle": "小小的船",
+      "charIds": [
+        "g1s_031",
+        "g1s_032",
+        "g1s_033",
+        "g1s_034",
+        "g1s_035",
+        "g1s_036",
+        "g1s_037"
+      ]
+    },
+    {
+      "id": "g1s_c8",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 8,
+      "title": "课文3",
+      "subtitle": "江南",
+      "charIds": [
+        "g1s_038",
+        "g1s_039",
+        "g1s_040",
+        "g1s_041",
+        "g1s_042",
+        "g1s_043"
+      ]
+    },
+    {
+      "id": "g1s_c9",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 9,
+      "title": "课文4",
+      "subtitle": "四季",
+      "charIds": [
+        "g1s_044",
+        "g1s_045",
+        "g1s_046",
+        "g1s_047",
+        "g1s_048",
+        "g1s_049"
+      ]
+    },
+    {
+      "id": "g1s_c10",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 10,
+      "title": "识字6",
+      "subtitle": "画",
+      "charIds": [
+        "g1s_050",
+        "g1s_051",
+        "g1s_052",
+        "g1s_053",
+        "g1s_054"
+      ]
+    },
+    {
+      "id": "g1s_c11",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 11,
+      "title": "识字7",
+      "subtitle": "大小多少",
+      "charIds": [
+        "g1s_055",
+        "g1s_056",
+        "g1s_057",
+        "g1s_058",
+        "g1s_059",
+        "g1s_060",
+        "g1s_061",
+        "g1s_062"
+      ]
+    },
+    {
+      "id": "g1s_c12",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 12,
+      "title": "识字8",
+      "subtitle": "小书包",
+      "charIds": [
+        "g1s_063",
+        "g1s_064",
+        "g1s_065",
+        "g1s_066",
+        "g1s_067",
+        "g1s_068"
+      ]
+    },
+    {
+      "id": "g1s_c13",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 13,
+      "title": "识字9",
+      "subtitle": "日月明",
+      "charIds": [
+        "g1s_069",
+        "g1s_070",
+        "g1s_071",
+        "g1s_072",
+        "g1s_073",
+        "g1s_074",
+        "g1s_075"
+      ]
+    },
+    {
+      "id": "g1s_c14",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 14,
+      "title": "识字10",
+      "subtitle": "升国旗",
+      "charIds": [
+        "g1s_076",
+        "g1s_077",
+        "g1s_078",
+        "g1s_079",
+        "g1s_080"
+      ]
+    },
+    {
+      "id": "g1s_c15",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 15,
+      "title": "课文5",
+      "subtitle": "影子",
+      "charIds": [
+        "g1s_081",
+        "g1s_082",
+        "g1s_083",
+        "g1s_084"
+      ]
+    },
+    {
+      "id": "g1s_c16",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 16,
+      "title": "课文6",
+      "subtitle": "比尾巴",
+      "charIds": [
+        "g1s_085",
+        "g1s_086",
+        "g1s_087",
+        "g1s_088",
+        "g1s_089",
+        "g1s_090"
+      ]
+    },
+    {
+      "id": "g1s_c17",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 17,
+      "title": "课文7",
+      "subtitle": "青蛙写诗",
+      "charIds": [
+        "g1s_091",
+        "g1s_092",
+        "g1s_093",
+        "g1s_094"
+      ]
+    },
+    {
+      "id": "g1s_c18",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 18,
+      "title": "课文8",
+      "subtitle": "雨点儿",
+      "charIds": [
+        "g1s_095",
+        "g1s_096",
+        "g1s_097",
+        "g1s_098"
+      ]
+    },
+    {
+      "id": "g1s_c19",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 19,
+      "title": "课文9",
+      "subtitle": "明天要远足",
+      "charIds": [
+        "g1s_099",
+        "g1s_100",
+        "g1s_101"
+      ]
+    },
+    {
+      "id": "g1s_c20",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 20,
+      "title": "课文10",
+      "subtitle": "大还是小",
+      "charIds": [
+        "g1s_102",
+        "g1s_103",
+        "g1s_104"
+      ]
+    },
+    {
+      "id": "g1s_c21",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 21,
+      "title": "课文11",
+      "subtitle": "项链",
+      "charIds": [
+        "g1s_105",
+        "g1s_106",
+        "g1s_107"
+      ]
+    },
+    {
+      "id": "g1s_c22",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 22,
+      "title": "课文12",
+      "subtitle": "雪地里的小画家",
+      "charIds": [
+        "g1s_108",
+        "g1s_109",
+        "g1s_110",
+        "g1s_111"
+      ]
+    },
+    {
+      "id": "g1s_c23",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 23,
+      "title": "课文13",
+      "subtitle": "乌鸦喝水",
+      "charIds": [
+        "g1s_112",
+        "g1s_113",
+        "g1s_114"
+      ]
+    },
+    {
+      "id": "g1s_c24",
+      "grade": 1,
+      "semester": 1,
+      "courseNumber": 24,
+      "title": "课文14",
+      "subtitle": "小蜗牛",
+      "charIds": [
+        "g1s_115",
+        "g1s_116",
+        "g1s_117",
+        "g1s_118",
+        "g1s_119",
+        "g1s_120"
+      ]
+    }
+  ],
+  "characters": {
+    "g1s_001": {
+      "id": "g1s_001",
+      "char": "天",
+      "pinyin": "tiān",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c1",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "横",
+        "横",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "天空",
+        "今天",
+        "明天"
+      ],
+      "meaning": "在地面以上的高空",
+      "mnemonic": "一人大天，头顶苍穹",
+      "order": 1
+    },
+    "g1s_002": {
+      "id": "g1s_002",
+      "char": "地",
+      "pinyin": "dì",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c1",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "提",
+        "横折钩",
+        "竖",
+        "弯钩"
+      ],
+      "words": [
+        "土地",
+        "地面",
+        "地球"
+      ],
+      "meaning": "地球表面",
+      "mnemonic": "土也成地，脚下厚土",
+      "order": 2
+    },
+    "g1s_003": {
+      "id": "g1s_003",
+      "char": "人",
+      "pinyin": "rén",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c1",
+      "type": "writing",
+      "strokes": 2,
+      "strokeOrder": [
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "人们",
+        "人民",
+        "人口"
+      ],
+      "meaning": "人类",
+      "mnemonic": "一撇一捺，相互支撑成一人",
+      "order": 3
+    },
+    "g1s_004": {
+      "id": "g1s_004",
+      "char": "你",
+      "pinyin": "nǐ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c1",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "撇",
+        "竖",
+        "撇",
+        "捺",
+        "竖钩",
+        "横",
+        "横"
+      ],
+      "words": [
+        "你们",
+        "你的",
+        "你好"
+      ],
+      "meaning": "称对方（一个人）",
+      "mnemonic": "人尔为你，你在我身边",
+      "order": 4
+    },
+    "g1s_005": {
+      "id": "g1s_005",
+      "char": "我",
+      "pinyin": "wǒ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c1",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "撇",
+        "横",
+        "竖钩",
+        "提",
+        "斜钩",
+        "撇",
+        "点"
+      ],
+      "words": [
+        "我们",
+        "我的",
+        "自己"
+      ],
+      "meaning": "称自己",
+      "mnemonic": "手戈为我，手持兵器保卫自己",
+      "order": 5
+    },
+    "g1s_006": {
+      "id": "g1s_006",
+      "char": "他",
+      "pinyin": "tā",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c1",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "撇",
+        "竖",
+        "横折钩",
+        "竖",
+        "竖弯钩"
+      ],
+      "words": [
+        "他们",
+        "他的",
+        "他人"
+      ],
+      "meaning": "称第三者（男性）",
+      "mnemonic": "人也为他，那个人是他",
+      "order": 6
+    },
+    "g1s_007": {
+      "id": "g1s_007",
+      "char": "一",
+      "pinyin": "yī",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c2",
+      "type": "writing",
+      "strokes": 1,
+      "strokeOrder": [
+        "横"
+      ],
+      "words": [
+        "一个",
+        "一人",
+        "一天"
+      ],
+      "meaning": "数字一",
+      "mnemonic": "横平竖直一条线，万物之始",
+      "order": 7
+    },
+    "g1s_008": {
+      "id": "g1s_008",
+      "char": "二",
+      "pinyin": "èr",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c2",
+      "type": "writing",
+      "strokes": 2,
+      "strokeOrder": [
+        "横",
+        "横"
+      ],
+      "words": [
+        "二月",
+        "二人",
+        "第二"
+      ],
+      "meaning": "数字二",
+      "mnemonic": "上横短来下横长，两个一排成二",
+      "order": 8
+    },
+    "g1s_009": {
+      "id": "g1s_009",
+      "char": "三",
+      "pinyin": "sān",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c2",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "横",
+        "横",
+        "横"
+      ],
+      "words": [
+        "三天",
+        "三月",
+        "第三"
+      ],
+      "meaning": "数字三",
+      "mnemonic": "三横等距排整齐，三阳开泰",
+      "order": 9
+    },
+    "g1s_010": {
+      "id": "g1s_010",
+      "char": "四",
+      "pinyin": "sì",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c2",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "撇",
+        "竖折",
+        "横"
+      ],
+      "words": [
+        "四月",
+        "四个",
+        "第四"
+      ],
+      "meaning": "数字四",
+      "mnemonic": "口字里面两腿踢，四方天地",
+      "order": 10
+    },
+    "g1s_011": {
+      "id": "g1s_011",
+      "char": "上",
+      "pinyin": "shàng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c2",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "竖",
+        "横",
+        "横"
+      ],
+      "words": [
+        "上下",
+        "上面",
+        "上学"
+      ],
+      "meaning": "位置在高处",
+      "mnemonic": "一竖一横步步上，向上攀登",
+      "order": 11
+    },
+    "g1s_012": {
+      "id": "g1s_012",
+      "char": "口",
+      "pinyin": "kǒu",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c3",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "人口",
+        "口水",
+        "出口"
+      ],
+      "meaning": "嘴巴",
+      "mnemonic": "方方正正一张口，开口说话",
+      "order": 12
+    },
+    "g1s_013": {
+      "id": "g1s_013",
+      "char": "耳",
+      "pinyin": "ěr",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c3",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "竖",
+        "横",
+        "横",
+        "横"
+      ],
+      "words": [
+        "耳朵",
+        "耳机",
+        "耳边"
+      ],
+      "meaning": "听觉器官",
+      "mnemonic": "耳朵形状像数字3，聆听声音",
+      "order": 13
+    },
+    "g1s_014": {
+      "id": "g1s_014",
+      "char": "目",
+      "pinyin": "mù",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c3",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "横"
+      ],
+      "words": [
+        "目光",
+        "目标",
+        "题目"
+      ],
+      "meaning": "眼睛",
+      "mnemonic": "眼睛横着放，目不转睛",
+      "order": 14
+    },
+    "g1s_015": {
+      "id": "g1s_015",
+      "char": "手",
+      "pinyin": "shǒu",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c3",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "撇",
+        "横",
+        "横",
+        "竖钩"
+      ],
+      "words": [
+        "手表",
+        "手机",
+        "双手"
+      ],
+      "meaning": "人体上肢前端",
+      "mnemonic": "手掌五指张开，手脑并用",
+      "order": 15
+    },
+    "g1s_016": {
+      "id": "g1s_016",
+      "char": "足",
+      "pinyin": "zú",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c3",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "竖",
+        "横",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "手足",
+        "足球",
+        "足够"
+      ],
+      "meaning": "脚",
+      "mnemonic": "口字下面走字底，足下生辉",
+      "order": 16
+    },
+    "g1s_017": {
+      "id": "g1s_017",
+      "char": "日",
+      "pinyin": "rì",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c4",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "横"
+      ],
+      "words": [
+        "日子",
+        "日出",
+        "日记"
+      ],
+      "meaning": "太阳",
+      "mnemonic": "方方正正太阳日，日升月落",
+      "order": 17
+    },
+    "g1s_018": {
+      "id": "g1s_018",
+      "char": "月",
+      "pinyin": "yuè",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c4",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "撇",
+        "横折钩",
+        "横",
+        "横"
+      ],
+      "words": [
+        "月亮",
+        "月光",
+        "月饼"
+      ],
+      "meaning": "月亮",
+      "mnemonic": "撇横折钩月儿圆，月光皎洁",
+      "order": 18
+    },
+    "g1s_019": {
+      "id": "g1s_019",
+      "char": "水",
+      "pinyin": "shuǐ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c4",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "竖钩",
+        "横撇",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "水果",
+        "喝水",
+        "河水"
+      ],
+      "meaning": "无色无味的液体",
+      "mnemonic": "竖钩左右两点水，水滴石穿",
+      "order": 19
+    },
+    "g1s_020": {
+      "id": "g1s_020",
+      "char": "火",
+      "pinyin": "huǒ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c4",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "点",
+        "撇",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "火车",
+        "火焰",
+        "灯火"
+      ],
+      "meaning": "燃烧产生的光和热",
+      "mnemonic": "人字头上两点火，火光冲天",
+      "order": 20
+    },
+    "g1s_021": {
+      "id": "g1s_021",
+      "char": "山",
+      "pinyin": "shān",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c5",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "竖",
+        "竖折",
+        "竖"
+      ],
+      "words": [
+        "大山",
+        "高山",
+        "山水"
+      ],
+      "meaning": "地面上高耸的部分",
+      "mnemonic": "三竖一横山连绵，青山绿水",
+      "order": 21
+    },
+    "g1s_022": {
+      "id": "g1s_022",
+      "char": "田",
+      "pinyin": "tián",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c5",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "竖",
+        "横"
+      ],
+      "words": [
+        "田地",
+        "水田",
+        "田野"
+      ],
+      "meaning": "种庄稼的土地",
+      "mnemonic": "口字里面十字田，田地肥沃",
+      "order": 22
+    },
+    "g1s_023": {
+      "id": "g1s_023",
+      "char": "禾",
+      "pinyin": "hé",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c5",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "撇",
+        "横",
+        "竖",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "禾苗",
+        "禾田",
+        "禾草"
+      ],
+      "meaning": "谷类植物的统称",
+      "mnemonic": "撇捺木字头上禾，禾苗青青",
+      "order": 23
+    },
+    "g1s_024": {
+      "id": "g1s_024",
+      "char": "对",
+      "pinyin": "duì",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c5",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "横撇",
+        "点",
+        "横",
+        "竖钩",
+        "点"
+      ],
+      "words": [
+        "对错",
+        "不对",
+        "对话"
+      ],
+      "meaning": "正确",
+      "mnemonic": "又字旁加寸字对，对答如流",
+      "order": 24
+    },
+    "g1s_025": {
+      "id": "g1s_025",
+      "char": "云",
+      "pinyin": "yún",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c5",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "横",
+        "横",
+        "撇折",
+        "点"
+      ],
+      "words": [
+        "白云",
+        "云朵",
+        "乌云"
+      ],
+      "meaning": "天空中的水汽凝结物",
+      "mnemonic": "二横一撇折云朵，云卷云舒",
+      "order": 25
+    },
+    "g1s_026": {
+      "id": "g1s_026",
+      "char": "秋",
+      "pinyin": "qiū",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c6",
+      "type": "writing",
+      "strokes": 9,
+      "strokeOrder": [
+        "撇",
+        "横",
+        "竖",
+        "撇",
+        "点",
+        "点",
+        "撇",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "秋天",
+        "秋风",
+        "中秋"
+      ],
+      "meaning": "一年四季中的第三季",
+      "mnemonic": "禾字旁边火字秋，秋高气爽",
+      "order": 26
+    },
+    "g1s_027": {
+      "id": "g1s_027",
+      "char": "气",
+      "pinyin": "qì",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c6",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "撇",
+        "横",
+        "横",
+        "横折钩"
+      ],
+      "words": [
+        "天气",
+        "空气",
+        "气球"
+      ],
+      "meaning": "气体",
+      "mnemonic": "乞字加一横",
+      "order": 27
+    },
+    "g1s_028": {
+      "id": "g1s_028",
+      "char": "了",
+      "pinyin": "le",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c6",
+      "type": "writing",
+      "strokes": 2,
+      "strokeOrder": [
+        "横撇",
+        "竖钩"
+      ],
+      "words": [
+        "走了",
+        "来了",
+        "好了"
+      ],
+      "meaning": "表示动作完成",
+      "mnemonic": "一横一钩了结了，了如指掌",
+      "order": 28
+    },
+    "g1s_029": {
+      "id": "g1s_029",
+      "char": "树",
+      "pinyin": "shù",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c6",
+      "type": "writing",
+      "strokes": 9,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "撇",
+        "点",
+        "横",
+        "竖",
+        "撇",
+        "捺",
+        "点"
+      ],
+      "words": [
+        "树木",
+        "大树",
+        "树叶"
+      ],
+      "meaning": "木本植物",
+      "mnemonic": "木字旁加对字成树，树木参天",
+      "order": 29
+    },
+    "g1s_030": {
+      "id": "g1s_030",
+      "char": "叶",
+      "pinyin": "yè",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c6",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "竖"
+      ],
+      "words": [
+        "树叶",
+        "叶子",
+        "落叶"
+      ],
+      "meaning": "植物的叶子",
+      "mnemonic": "口+十",
+      "order": 30
+    },
+    "g1s_031": {
+      "id": "g1s_031",
+      "char": "片",
+      "pinyin": "piàn",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c7",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "撇",
+        "竖",
+        "横",
+        "横折"
+      ],
+      "words": [
+        "一片",
+        "叶片",
+        "图片"
+      ],
+      "meaning": "扁平的东西",
+      "mnemonic": "牌字去掉右边",
+      "order": 31
+    },
+    "g1s_032": {
+      "id": "g1s_032",
+      "char": "大",
+      "pinyin": "dà",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c7",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "横",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "大人",
+        "大小",
+        "大家"
+      ],
+      "meaning": "体积、面积、数量等超过一般",
+      "mnemonic": "一横一撇一捺大，大人有大志",
+      "order": 32
+    },
+    "g1s_033": {
+      "id": "g1s_033",
+      "char": "飞",
+      "pinyin": "fēi",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c7",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "横折弯钩",
+        "撇",
+        "点"
+      ],
+      "words": [
+        "飞机",
+        "飞鸟",
+        "飞翔"
+      ],
+      "meaning": "在空中行动",
+      "mnemonic": "横折弯钩飞上天，飞黄腾达",
+      "order": 33
+    },
+    "g1s_034": {
+      "id": "g1s_034",
+      "char": "会",
+      "pinyin": "huì",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c7",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "撇",
+        "捺",
+        "横",
+        "横",
+        "撇折",
+        "竖"
+      ],
+      "words": [
+        "会写",
+        "开会",
+        "学会"
+      ],
+      "meaning": "能够，懂得",
+      "mnemonic": "人字头下云字会，会心一笑",
+      "order": 34
+    },
+    "g1s_035": {
+      "id": "g1s_035",
+      "char": "个",
+      "pinyin": "gè",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c7",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "撇",
+        "捺",
+        "竖"
+      ],
+      "words": [
+        "一个",
+        "个人",
+        "个别"
+      ],
+      "meaning": "量词",
+      "mnemonic": "人字头下一竖个，个人成长",
+      "order": 35
+    },
+    "g1s_036": {
+      "id": "g1s_036",
+      "char": "两",
+      "pinyin": "liǎng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c7",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "横折钩",
+        "撇",
+        "点",
+        "撇",
+        "点"
+      ],
+      "words": [
+        "两个",
+        "两人",
+        "两边"
+      ],
+      "meaning": "数字二",
+      "mnemonic": "一横框里人入两，两全其美",
+      "order": 36
+    },
+    "g1s_037": {
+      "id": "g1s_037",
+      "char": "头",
+      "pinyin": "tóu",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c7",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "点",
+        "点",
+        "横",
+        "撇",
+        "点"
+      ],
+      "words": [
+        "头发",
+        "头脑",
+        "开头"
+      ],
+      "meaning": "人体最上部",
+      "mnemonic": "大字加两点",
+      "order": 37
+    },
+    "g1s_038": {
+      "id": "g1s_038",
+      "char": "可",
+      "pinyin": "kě",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c8",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "横折",
+        "横",
+        "竖钩"
+      ],
+      "words": [
+        "可以",
+        "可爱",
+        "可能"
+      ],
+      "meaning": "能够",
+      "mnemonic": "一横口字竖钩可，可歌可泣",
+      "order": 38
+    },
+    "g1s_039": {
+      "id": "g1s_039",
+      "char": "东",
+      "pinyin": "dōng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c8",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "横",
+        "撇折",
+        "竖钩",
+        "撇",
+        "点"
+      ],
+      "words": [
+        "东方",
+        "东西",
+        "东风"
+      ],
+      "meaning": "方向，太阳升起的一方",
+      "mnemonic": "木字中间一横东，旭日东升",
+      "order": 39
+    },
+    "g1s_040": {
+      "id": "g1s_040",
+      "char": "西",
+      "pinyin": "xī",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c8",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "横折",
+        "撇",
+        "竖弯",
+        "横"
+      ],
+      "words": [
+        "西方",
+        "西边",
+        "西瓜"
+      ],
+      "meaning": "方向，太阳落下的一方",
+      "mnemonic": "一横口字撇竖西，夕阳西下",
+      "order": 40
+    },
+    "g1s_041": {
+      "id": "g1s_041",
+      "char": "江",
+      "pinyin": "jiāng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c8",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "点",
+        "点",
+        "提",
+        "横",
+        "竖",
+        "横"
+      ],
+      "words": [
+        "江水",
+        "长江",
+        "江南"
+      ],
+      "meaning": "大河",
+      "mnemonic": "氵+工",
+      "order": 41
+    },
+    "g1s_042": {
+      "id": "g1s_042",
+      "char": "南",
+      "pinyin": "nán",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c8",
+      "type": "writing",
+      "strokes": 9,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "竖",
+        "横折钩",
+        "撇",
+        "点",
+        "撇",
+        "横",
+        "竖"
+      ],
+      "words": [
+        "南方",
+        "江南",
+        "南边"
+      ],
+      "meaning": "方向，早晨面向太阳右手的一边",
+      "mnemonic": "十字框里两腿南，南来北往",
+      "order": 42
+    },
+    "g1s_043": {
+      "id": "g1s_043",
+      "char": "北",
+      "pinyin": "běi",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c8",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "竖",
+        "横",
+        "提",
+        "撇",
+        "竖弯钩"
+      ],
+      "words": [
+        "北方",
+        "北边",
+        "东北"
+      ],
+      "meaning": "方向，早晨面向太阳左手的一边",
+      "mnemonic": "两人背靠背向北，北风呼啸",
+      "order": 43
+    },
+    "g1s_044": {
+      "id": "g1s_044",
+      "char": "春",
+      "pinyin": "chūn",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c9",
+      "type": "writing",
+      "strokes": 9,
+      "strokeOrder": [
+        "横",
+        "横",
+        "横",
+        "撇",
+        "捺",
+        "竖",
+        "横折",
+        "横",
+        "横"
+      ],
+      "words": [
+        "春天",
+        "春风",
+        "春日"
+      ],
+      "meaning": "一年四季中的第一季",
+      "mnemonic": "三人同游春天里，春暖花开",
+      "order": 44
+    },
+    "g1s_045": {
+      "id": "g1s_045",
+      "char": "青",
+      "pinyin": "qīng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c9",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "横",
+        "横",
+        "竖",
+        "横",
+        "竖",
+        "横折钩",
+        "横",
+        "横"
+      ],
+      "words": [
+        "青草",
+        "青色",
+        "青蛙"
+      ],
+      "meaning": "绿色",
+      "mnemonic": "三+月",
+      "order": 45
+    },
+    "g1s_046": {
+      "id": "g1s_046",
+      "char": "夏",
+      "pinyin": "xià",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c9",
+      "type": "writing",
+      "strokes": 10,
+      "strokeOrder": [
+        "横",
+        "撇",
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "撇",
+        "横撇",
+        "捺"
+      ],
+      "words": [
+        "夏天",
+        "夏季",
+        "夏日"
+      ],
+      "meaning": "一年四季中的第二季",
+      "mnemonic": "一撇横竖目字夏，夏日炎炎",
+      "order": 46
+    },
+    "g1s_047": {
+      "id": "g1s_047",
+      "char": "冬",
+      "pinyin": "dōng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c9",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "撇",
+        "横撇",
+        "捺",
+        "点",
+        "点"
+      ],
+      "words": [
+        "冬天",
+        "冬季",
+        "冬日"
+      ],
+      "meaning": "一年四季中的第四季",
+      "mnemonic": "折文下面两点冬，冬去春来",
+      "order": 47
+    },
+    "g1s_048": {
+      "id": "g1s_048",
+      "char": "雪",
+      "pinyin": "xuě",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c9",
+      "type": "writing",
+      "strokes": 11,
+      "strokeOrder": [
+        "横",
+        "点",
+        "横撇",
+        "竖",
+        "点",
+        "点",
+        "点",
+        "点",
+        "横折",
+        "横",
+        "横"
+      ],
+      "words": [
+        "下雪",
+        "雪花",
+        "雪人"
+      ],
+      "meaning": "天空中落下的白色结晶",
+      "mnemonic": "雨字头下山字雪，雪花飘飘",
+      "order": 48
+    },
+    "g1s_049": {
+      "id": "g1s_049",
+      "char": "花",
+      "pinyin": "huā",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c9",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "竖",
+        "撇",
+        "竖",
+        "撇",
+        "竖弯钩"
+      ],
+      "words": [
+        "花朵",
+        "鲜花",
+        "花草"
+      ],
+      "meaning": "植物的繁殖器官",
+      "mnemonic": "草字头下化成花，花开富贵",
+      "order": 49
+    },
+    "g1s_050": {
+      "id": "g1s_050",
+      "char": "画",
+      "pinyin": "huà",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c10",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "横折",
+        "横",
+        "竖",
+        "横",
+        "竖折",
+        "竖"
+      ],
+      "words": [
+        "画画",
+        "图画",
+        "画笔"
+      ],
+      "meaning": "绘画",
+      "mnemonic": "一横田字框里画，画龙点睛",
+      "order": 50
+    },
+    "g1s_051": {
+      "id": "g1s_051",
+      "char": "远",
+      "pinyin": "yuǎn",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c10",
+      "type": "reading",
+      "strokes": 7,
+      "strokeOrder": [
+        "横",
+        "横",
+        "撇",
+        "竖弯钩",
+        "点",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "远方",
+        "远近",
+        "遥远"
+      ],
+      "meaning": "距离长",
+      "mnemonic": "走之底加元字远，远走高飞",
+      "order": 51
+    },
+    "g1s_052": {
+      "id": "g1s_052",
+      "char": "近",
+      "pinyin": "jìn",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c10",
+      "type": "reading",
+      "strokes": 7,
+      "strokeOrder": [
+        "撇",
+        "撇",
+        "横",
+        "竖",
+        "点",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "近处",
+        "附近",
+        "走近"
+      ],
+      "meaning": "距离短",
+      "mnemonic": "走之底加斤字近，近水楼台",
+      "order": 52
+    },
+    "g1s_053": {
+      "id": "g1s_053",
+      "char": "听",
+      "pinyin": "tīng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c10",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "撇",
+        "撇",
+        "横",
+        "竖"
+      ],
+      "words": [
+        "听见",
+        "好听",
+        "听话"
+      ],
+      "meaning": "用耳朵接收声音",
+      "mnemonic": "口字旁加斤字听，听风听雨",
+      "order": 53
+    },
+    "g1s_054": {
+      "id": "g1s_054",
+      "char": "声",
+      "pinyin": "shēng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c10",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "横",
+        "横折",
+        "横",
+        "撇",
+        "横"
+      ],
+      "words": [
+        "声音",
+        "笑声",
+        "大声"
+      ],
+      "meaning": "声音",
+      "mnemonic": "士+巴",
+      "order": 54
+    },
+    "g1s_055": {
+      "id": "g1s_055",
+      "char": "小",
+      "pinyin": "xiǎo",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c11",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "竖钩",
+        "撇",
+        "点"
+      ],
+      "words": [
+        "小孩",
+        "大小",
+        "小鸟"
+      ],
+      "meaning": "体积、面积、数量等不大",
+      "mnemonic": "一竖两点小又巧，小事细心做",
+      "order": 55
+    },
+    "g1s_056": {
+      "id": "g1s_056",
+      "char": "多",
+      "pinyin": "duō",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c11",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "撇",
+        "横撇",
+        "点",
+        "撇",
+        "横撇",
+        "点"
+      ],
+      "words": [
+        "多少",
+        "很多",
+        "多好"
+      ],
+      "meaning": "数量大",
+      "mnemonic": "夕夕叠在一起多，多多益善",
+      "order": 56
+    },
+    "g1s_057": {
+      "id": "g1s_057",
+      "char": "少",
+      "pinyin": "shǎo",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c11",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "竖",
+        "撇",
+        "点",
+        "撇"
+      ],
+      "words": [
+        "多少",
+        "少年",
+        "少数"
+      ],
+      "meaning": "数量不多",
+      "mnemonic": "小字一撇少一点，少年老成",
+      "order": 57
+    },
+    "g1s_058": {
+      "id": "g1s_058",
+      "char": "牛",
+      "pinyin": "niú",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c11",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "撇",
+        "横",
+        "横",
+        "竖"
+      ],
+      "words": [
+        "牛奶",
+        "黄牛",
+        "小牛"
+      ],
+      "meaning": "一种家畜",
+      "mnemonic": "撇横横竖牛头角，牛气冲天",
+      "order": 58
+    },
+    "g1s_059": {
+      "id": "g1s_059",
+      "char": "果",
+      "pinyin": "guǒ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c11",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "横",
+        "竖",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "水果",
+        "苹果",
+        "果实"
+      ],
+      "meaning": "植物的果实",
+      "mnemonic": "田字下面木字果，果实累累",
+      "order": 59
+    },
+    "g1s_060": {
+      "id": "g1s_060",
+      "char": "鸟",
+      "pinyin": "niǎo",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c11",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "撇",
+        "横折钩",
+        "点",
+        "竖折折钩",
+        "横"
+      ],
+      "words": [
+        "小鸟",
+        "鸟儿",
+        "飞鸟"
+      ],
+      "meaning": "有羽毛会飞的动物",
+      "mnemonic": "撇横折钩一点鸟，鸟儿飞翔",
+      "order": 60
+    },
+    "g1s_061": {
+      "id": "g1s_061",
+      "char": "只",
+      "pinyin": "zhī",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c11",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "撇",
+        "点"
+      ],
+      "words": [
+        "一只",
+        "只身",
+        "只是"
+      ],
+      "meaning": "量词",
+      "mnemonic": "口+八",
+      "order": 61
+    },
+    "g1s_062": {
+      "id": "g1s_062",
+      "char": "边",
+      "pinyin": "biān",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c11",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "横折钩",
+        "撇",
+        "点",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "边走",
+        "旁边",
+        "一边"
+      ],
+      "meaning": "旁边",
+      "mnemonic": "走之底加力字边，旁边那边",
+      "order": 62
+    },
+    "g1s_063": {
+      "id": "g1s_063",
+      "char": "书",
+      "pinyin": "shū",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c12",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "横折钩",
+        "竖钩",
+        "竖",
+        "点"
+      ],
+      "words": [
+        "书本",
+        "读书",
+        "书写"
+      ],
+      "meaning": "装订成册的著作",
+      "mnemonic": "横折横折钩竖书，书香门第",
+      "order": 63
+    },
+    "g1s_064": {
+      "id": "g1s_064",
+      "char": "包",
+      "pinyin": "bāo",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c12",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "撇",
+        "横折钩",
+        "横折",
+        "横",
+        "竖弯钩"
+      ],
+      "words": [
+        "书包",
+        "包子",
+        "面包"
+      ],
+      "meaning": "包裹，袋子",
+      "mnemonic": "勺子包起来",
+      "order": 64
+    },
+    "g1s_065": {
+      "id": "g1s_065",
+      "char": "尺",
+      "pinyin": "chǐ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c12",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "横折",
+        "横",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "尺子",
+        "直尺",
+        "卷尺"
+      ],
+      "meaning": "量长度的工具",
+      "mnemonic": "尺子的形状",
+      "order": 65
+    },
+    "g1s_066": {
+      "id": "g1s_066",
+      "char": "作",
+      "pinyin": "zuò",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c12",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "撇",
+        "竖",
+        "横",
+        "横",
+        "撇",
+        "横",
+        "竖"
+      ],
+      "words": [
+        "作业",
+        "工作",
+        "作文"
+      ],
+      "meaning": "做事",
+      "mnemonic": "亻+乍",
+      "order": 66
+    },
+    "g1s_067": {
+      "id": "g1s_067",
+      "char": "业",
+      "pinyin": "yè",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c12",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "竖",
+        "竖",
+        "横",
+        "横",
+        "横"
+      ],
+      "words": [
+        "作业",
+        "事业",
+        "工业"
+      ],
+      "meaning": "事业，学业",
+      "mnemonic": "两竖三横",
+      "order": 67
+    },
+    "g1s_068": {
+      "id": "g1s_068",
+      "char": "本",
+      "pinyin": "běn",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c12",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "撇",
+        "捺",
+        "横"
+      ],
+      "words": [
+        "书本",
+        "本来",
+        "本人"
+      ],
+      "meaning": "草木的根，书本",
+      "mnemonic": "木字下面一横",
+      "order": 68
+    },
+    "g1s_069": {
+      "id": "g1s_069",
+      "char": "明",
+      "pinyin": "míng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c13",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "撇",
+        "横折钩",
+        "横",
+        "横"
+      ],
+      "words": [
+        "明天",
+        "明白",
+        "光明"
+      ],
+      "meaning": "明亮，清楚",
+      "mnemonic": "日月同辉天地明，光明正大",
+      "order": 69
+    },
+    "g1s_070": {
+      "id": "g1s_070",
+      "char": "力",
+      "pinyin": "lì",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c13",
+      "type": "writing",
+      "strokes": 2,
+      "strokeOrder": [
+        "横折钩",
+        "撇"
+      ],
+      "words": [
+        "力气",
+        "力量",
+        "用力"
+      ],
+      "meaning": "力量",
+      "mnemonic": "一钩一撇",
+      "order": 70
+    },
+    "g1s_071": {
+      "id": "g1s_071",
+      "char": "尘",
+      "pinyin": "chén",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c13",
+      "type": "reading",
+      "strokes": 6,
+      "strokeOrder": [
+        "竖",
+        "撇",
+        "点",
+        "横",
+        "竖",
+        "横"
+      ],
+      "words": [
+        "尘土",
+        "灰尘",
+        "尘埃"
+      ],
+      "meaning": "灰尘",
+      "mnemonic": "小+土",
+      "order": 71
+    },
+    "g1s_072": {
+      "id": "g1s_072",
+      "char": "从",
+      "pinyin": "cóng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c13",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "撇",
+        "点",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "从前",
+        "从来",
+        "跟从"
+      ],
+      "meaning": "跟随",
+      "mnemonic": "两个人一前一后",
+      "order": 72
+    },
+    "g1s_073": {
+      "id": "g1s_073",
+      "char": "众",
+      "pinyin": "zhòng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c13",
+      "type": "reading",
+      "strokes": 6,
+      "strokeOrder": [
+        "撇",
+        "捺",
+        "撇",
+        "捺",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "众人",
+        "大众",
+        "观众"
+      ],
+      "meaning": "许多人",
+      "mnemonic": "三个人在一起",
+      "order": 73
+    },
+    "g1s_074": {
+      "id": "g1s_074",
+      "char": "双",
+      "pinyin": "shuāng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c13",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "横撇",
+        "捺",
+        "横撇",
+        "捺"
+      ],
+      "words": [
+        "双手",
+        "双亲",
+        "一双"
+      ],
+      "meaning": "两个",
+      "mnemonic": "两个又",
+      "order": 74
+    },
+    "g1s_075": {
+      "id": "g1s_075",
+      "char": "木",
+      "pinyin": "mù",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c13",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "木头",
+        "树木",
+        "木马"
+      ],
+      "meaning": "树木",
+      "mnemonic": "一横一竖两撇捺，树木成长靠大地",
+      "order": 75
+    },
+    "g1s_076": {
+      "id": "g1s_076",
+      "char": "升",
+      "pinyin": "shēng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c14",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "撇",
+        "横",
+        "撇",
+        "竖"
+      ],
+      "words": [
+        "上升",
+        "升起",
+        "升高"
+      ],
+      "meaning": "向上",
+      "mnemonic": "千字加一撇",
+      "order": 76
+    },
+    "g1s_077": {
+      "id": "g1s_077",
+      "char": "国",
+      "pinyin": "guó",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c14",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "竖",
+        "横",
+        "点",
+        "横"
+      ],
+      "words": [
+        "中国",
+        "国家",
+        "国旗"
+      ],
+      "meaning": "国家",
+      "mnemonic": "口字框里玉字国，国泰民安",
+      "order": 77
+    },
+    "g1s_078": {
+      "id": "g1s_078",
+      "char": "旗",
+      "pinyin": "qí",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c14",
+      "type": "reading",
+      "strokes": 14,
+      "strokeOrder": [
+        "点",
+        "横撇",
+        "撇",
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "横",
+        "横",
+        "横",
+        "撇",
+        "横撇",
+        "捺",
+        "点"
+      ],
+      "words": [
+        "红旗",
+        "国旗",
+        "旗帜"
+      ],
+      "meaning": "旗帜",
+      "mnemonic": "方+其",
+      "order": 78
+    },
+    "g1s_079": {
+      "id": "g1s_079",
+      "char": "中",
+      "pinyin": "zhōng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c14",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "竖"
+      ],
+      "words": [
+        "中间",
+        "中国",
+        "中心"
+      ],
+      "meaning": "中心，里面",
+      "mnemonic": "口字中间一竖中，中心思想",
+      "order": 79
+    },
+    "g1s_080": {
+      "id": "g1s_080",
+      "char": "红",
+      "pinyin": "hóng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c14",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "撇折",
+        "撇折",
+        "提",
+        "横",
+        "竖",
+        "横"
+      ],
+      "words": [
+        "红色",
+        "红旗",
+        "红领巾"
+      ],
+      "meaning": "像血一样的颜色",
+      "mnemonic": "绞丝旁加工字红，红红火火",
+      "order": 80
+    },
+    "g1s_081": {
+      "id": "g1s_081",
+      "char": "影",
+      "pinyin": "yǐng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c15",
+      "type": "writing",
+      "strokes": 15,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "撇",
+        "横折钩",
+        "撇",
+        "撇",
+        "撇",
+        "横",
+        "竖钩",
+        "撇",
+        "点",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "影子",
+        "电影",
+        "合影"
+      ],
+      "meaning": "物体挡住光线形成的暗影",
+      "mnemonic": "景+彡",
+      "order": 81
+    },
+    "g1s_082": {
+      "id": "g1s_082",
+      "char": "前",
+      "pinyin": "qián",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c15",
+      "type": "writing",
+      "strokes": 9,
+      "strokeOrder": [
+        "点",
+        "撇",
+        "横",
+        "竖",
+        "横折钩",
+        "横",
+        "横",
+        "竖",
+        "竖钩"
+      ],
+      "words": [
+        "前面",
+        "从前",
+        "前进"
+      ],
+      "meaning": "方向朝前",
+      "mnemonic": "月字刂字前边走，前赴后继",
+      "order": 82
+    },
+    "g1s_083": {
+      "id": "g1s_083",
+      "char": "后",
+      "pinyin": "hòu",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c15",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "撇",
+        "撇",
+        "横",
+        "竖",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "后面",
+        "后来",
+        "前后"
+      ],
+      "meaning": "方向朝后",
+      "mnemonic": "撇横口字一竖后，后来居上",
+      "order": 83
+    },
+    "g1s_084": {
+      "id": "g1s_084",
+      "char": "黑",
+      "pinyin": "hēi",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c15",
+      "type": "writing",
+      "strokes": 12,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "点",
+        "撇",
+        "横",
+        "竖",
+        "横",
+        "横",
+        "横",
+        "竖",
+        "撇",
+        "点"
+      ],
+      "words": [
+        "黑色",
+        "黑夜",
+        "黑板"
+      ],
+      "meaning": "像煤一样的颜色",
+      "mnemonic": "里+灬",
+      "order": 84
+    },
+    "g1s_085": {
+      "id": "g1s_085",
+      "char": "狗",
+      "pinyin": "gǒu",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c16",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "撇",
+        "弯钩",
+        "撇",
+        "撇",
+        "横折钩",
+        "竖",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "小狗",
+        "狗熊",
+        "狼狗"
+      ],
+      "meaning": "一种家畜",
+      "mnemonic": "犭+句",
+      "order": 85
+    },
+    "g1s_086": {
+      "id": "g1s_086",
+      "char": "又",
+      "pinyin": "yòu",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c16",
+      "type": "writing",
+      "strokes": 2,
+      "strokeOrder": [
+        "横撇",
+        "捺"
+      ],
+      "words": [
+        "又来",
+        "又大又圆",
+        "又唱又跳"
+      ],
+      "meaning": "再，更",
+      "mnemonic": "一只手",
+      "order": 86
+    },
+    "g1s_087": {
+      "id": "g1s_087",
+      "char": "比",
+      "pinyin": "bǐ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c16",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "横",
+        "竖提",
+        "撇",
+        "竖弯钩"
+      ],
+      "words": [
+        "比较",
+        "对比",
+        "比赛"
+      ],
+      "meaning": "较量",
+      "mnemonic": "两把匕首",
+      "order": 87
+    },
+    "g1s_088": {
+      "id": "g1s_088",
+      "char": "尾",
+      "pinyin": "wěi",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c16",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "横折",
+        "横",
+        "撇",
+        "撇",
+        "横",
+        "横",
+        "竖弯钩"
+      ],
+      "words": [
+        "尾巴",
+        "结尾",
+        "尾随"
+      ],
+      "meaning": "动物身体末端的部分",
+      "mnemonic": "尸+毛",
+      "order": 88
+    },
+    "g1s_089": {
+      "id": "g1s_089",
+      "char": "巴",
+      "pinyin": "bā",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c16",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "横折",
+        "竖",
+        "横",
+        "竖弯钩"
+      ],
+      "words": [
+        "尾巴",
+        "嘴巴",
+        "下巴"
+      ],
+      "meaning": "盼望，粘住",
+      "mnemonic": "蛇的形状",
+      "order": 89
+    },
+    "g1s_090": {
+      "id": "g1s_090",
+      "char": "把",
+      "pinyin": "bǎ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c16",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "横",
+        "竖钩",
+        "提",
+        "横折",
+        "竖",
+        "横",
+        "竖弯钩"
+      ],
+      "words": [
+        "一把",
+        "把手",
+        "把握"
+      ],
+      "meaning": "拿，握",
+      "mnemonic": "扌+巴",
+      "order": 90
+    },
+    "g1s_091": {
+      "id": "g1s_091",
+      "char": "下",
+      "pinyin": "xià",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c17",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "点"
+      ],
+      "words": [
+        "上下",
+        "下面",
+        "下雨"
+      ],
+      "meaning": "位置在低处",
+      "mnemonic": "一竖一点向下走，脚踏实地",
+      "order": 91
+    },
+    "g1s_092": {
+      "id": "g1s_092",
+      "char": "雨",
+      "pinyin": "yǔ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c17",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "横",
+        "竖",
+        "横折钩",
+        "竖",
+        "点",
+        "点",
+        "点",
+        "点"
+      ],
+      "words": [
+        "下雨",
+        "雨水",
+        "雨伞"
+      ],
+      "meaning": "从云层落下的水滴",
+      "mnemonic": "横竖框里四点雨，雨过天晴",
+      "order": 92
+    },
+    "g1s_093": {
+      "id": "g1s_093",
+      "char": "们",
+      "pinyin": "men",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c17",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "撇",
+        "竖",
+        "点",
+        "竖",
+        "横折钩"
+      ],
+      "words": [
+        "我们",
+        "他们",
+        "人们"
+      ],
+      "meaning": "表示复数",
+      "mnemonic": "单人旁加门字们，我们你们",
+      "order": 93
+    },
+    "g1s_094": {
+      "id": "g1s_094",
+      "char": "问",
+      "pinyin": "wèn",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c17",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "点",
+        "竖",
+        "横折钩",
+        "竖",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "问好",
+        "问题",
+        "问话"
+      ],
+      "meaning": "有不知道的事请人解答",
+      "mnemonic": "门字框里口字问，问心无愧",
+      "order": 94
+    },
+    "g1s_095": {
+      "id": "g1s_095",
+      "char": "有",
+      "pinyin": "yǒu",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c18",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "横",
+        "撇",
+        "竖",
+        "横折钩",
+        "横",
+        "横"
+      ],
+      "words": [
+        "有人",
+        "没有",
+        "有趣"
+      ],
+      "meaning": "拥有",
+      "mnemonic": "月字下面一横有，有求必应",
+      "order": 95
+    },
+    "g1s_096": {
+      "id": "g1s_096",
+      "char": "半",
+      "pinyin": "bàn",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c18",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "点",
+        "撇",
+        "横",
+        "横",
+        "竖"
+      ],
+      "words": [
+        "一半",
+        "半天",
+        "半路"
+      ],
+      "meaning": "二分之一",
+      "mnemonic": "两横中间一竖",
+      "order": 96
+    },
+    "g1s_097": {
+      "id": "g1s_097",
+      "char": "从",
+      "pinyin": "cóng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c18",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "撇",
+        "点",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "从来",
+        "从前",
+        "跟从"
+      ],
+      "meaning": "自，由",
+      "mnemonic": "两个人一前一后",
+      "order": 97
+    },
+    "g1s_098": {
+      "id": "g1s_098",
+      "char": "你",
+      "pinyin": "nǐ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c18",
+      "type": "writing",
+      "strokes": 7,
+      "strokeOrder": [
+        "撇",
+        "竖",
+        "撇",
+        "捺",
+        "竖钩",
+        "横",
+        "横"
+      ],
+      "words": [
+        "你们",
+        "你的",
+        "你好"
+      ],
+      "meaning": "称对方",
+      "mnemonic": "人尔为你，你在我身边",
+      "order": 98
+    },
+    "g1s_099": {
+      "id": "g1s_099",
+      "char": "才",
+      "pinyin": "cái",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c19",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "横",
+        "竖钩",
+        "撇"
+      ],
+      "words": [
+        "人才",
+        "刚才",
+        "才能"
+      ],
+      "meaning": "刚刚，方才",
+      "mnemonic": "一横一竖一撇才，才高八斗",
+      "order": 99
+    },
+    "g1s_100": {
+      "id": "g1s_100",
+      "char": "明",
+      "pinyin": "míng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c19",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "撇",
+        "横折钩",
+        "横",
+        "横"
+      ],
+      "words": [
+        "明天",
+        "明白",
+        "光明"
+      ],
+      "meaning": "明亮，清楚",
+      "mnemonic": "日月同辉天地明，光明正大",
+      "order": 100
+    },
+    "g1s_101": {
+      "id": "g1s_101",
+      "char": "同",
+      "pinyin": "tóng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c19",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "竖",
+        "横折钩",
+        "横",
+        "竖",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "同学",
+        "相同",
+        "一同"
+      ],
+      "meaning": "一样，共同",
+      "mnemonic": "同字框里口字同，同心协力",
+      "order": 101
+    },
+    "g1s_102": {
+      "id": "g1s_102",
+      "char": "学",
+      "pinyin": "xué",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c20",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "点",
+        "点",
+        "撇",
+        "横撇",
+        "横钩",
+        "横",
+        "竖",
+        "横"
+      ],
+      "words": [
+        "学生",
+        "学习",
+        "学校"
+      ],
+      "meaning": "学习",
+      "mnemonic": "三点水字头下子学，学海无涯",
+      "order": 102
+    },
+    "g1s_103": {
+      "id": "g1s_103",
+      "char": "自",
+      "pinyin": "zì",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c20",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "撇",
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "横"
+      ],
+      "words": [
+        "自己",
+        "自由",
+        "自觉"
+      ],
+      "meaning": "本人",
+      "mnemonic": "目字上面一撇",
+      "order": 103
+    },
+    "g1s_104": {
+      "id": "g1s_104",
+      "char": "己",
+      "pinyin": "jǐ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c20",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "横折",
+        "横",
+        "竖弯钩"
+      ],
+      "words": [
+        "自己",
+        "知己",
+        "己方"
+      ],
+      "meaning": "自己",
+      "mnemonic": "蛇盘起来",
+      "order": 104
+    },
+    "g1s_105": {
+      "id": "g1s_105",
+      "char": "衣",
+      "pinyin": "yī",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c21",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "点",
+        "横",
+        "撇",
+        "竖提",
+        "撇",
+        "捺"
+      ],
+      "words": [
+        "衣服",
+        "大衣",
+        "上衣"
+      ],
+      "meaning": "穿在身上的东西",
+      "mnemonic": "一点一横两撇捺",
+      "order": 105
+    },
+    "g1s_106": {
+      "id": "g1s_106",
+      "char": "白",
+      "pinyin": "bái",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c21",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "撇",
+        "竖",
+        "横折",
+        "横",
+        "横"
+      ],
+      "words": [
+        "白色",
+        "白天",
+        "白云"
+      ],
+      "meaning": "像雪一样的颜色",
+      "mnemonic": "撇横竖框白颜色，白璧无瑕",
+      "order": 106
+    },
+    "g1s_107": {
+      "id": "g1s_107",
+      "char": "的",
+      "pinyin": "de",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c21",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "撇",
+        "竖",
+        "横折",
+        "横",
+        "横",
+        "撇",
+        "点",
+        "点"
+      ],
+      "words": [
+        "我的",
+        "你的",
+        "好的"
+      ],
+      "meaning": "助词，表示所属关系",
+      "mnemonic": "白字旁加勺字的，的的确确",
+      "order": 107
+    },
+    "g1s_108": {
+      "id": "g1s_108",
+      "char": "又",
+      "pinyin": "yòu",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c22",
+      "type": "writing",
+      "strokes": 2,
+      "strokeOrder": [
+        "横撇",
+        "捺"
+      ],
+      "words": [
+        "又来",
+        "又大又圆",
+        "又唱又跳"
+      ],
+      "meaning": "再，更",
+      "mnemonic": "一只手",
+      "order": 108
+    },
+    "g1s_109": {
+      "id": "g1s_109",
+      "char": "和",
+      "pinyin": "hé",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c22",
+      "type": "writing",
+      "strokes": 8,
+      "strokeOrder": [
+        "撇",
+        "横",
+        "竖",
+        "撇",
+        "点",
+        "竖",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "和好",
+        "和平",
+        "我和你"
+      ],
+      "meaning": "与，同",
+      "mnemonic": "禾字旁加口字和，和气生财",
+      "order": 109
+    },
+    "g1s_110": {
+      "id": "g1s_110",
+      "char": "竹",
+      "pinyin": "zhú",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c22",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "撇",
+        "横",
+        "点",
+        "撇",
+        "横",
+        "点"
+      ],
+      "words": [
+        "竹子",
+        "竹叶",
+        "竹林"
+      ],
+      "meaning": "一种植物",
+      "mnemonic": "两个个字排成竹，竹子挺拔",
+      "order": 110
+    },
+    "g1s_111": {
+      "id": "g1s_111",
+      "char": "牙",
+      "pinyin": "yá",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c22",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "横",
+        "撇折",
+        "竖钩",
+        "撇"
+      ],
+      "words": [
+        "牙齿",
+        "门牙",
+        "牙医"
+      ],
+      "meaning": "牙齿",
+      "mnemonic": "牙齿的形状",
+      "order": 111
+    },
+    "g1s_112": {
+      "id": "g1s_112",
+      "char": "马",
+      "pinyin": "mǎ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c23",
+      "type": "writing",
+      "strokes": 3,
+      "strokeOrder": [
+        "横折",
+        "竖折钩",
+        "横"
+      ],
+      "words": [
+        "小马",
+        "马车",
+        "马上"
+      ],
+      "meaning": "一种动物",
+      "mnemonic": "马头马身",
+      "order": 112
+    },
+    "g1s_113": {
+      "id": "g1s_113",
+      "char": "用",
+      "pinyin": "yòng",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c23",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "撇",
+        "横折钩",
+        "横",
+        "横",
+        "竖"
+      ],
+      "words": [
+        "有用",
+        "使用",
+        "用心"
+      ],
+      "meaning": "使用",
+      "mnemonic": "月字中间一竖",
+      "order": 113
+    },
+    "g1s_114": {
+      "id": "g1s_114",
+      "char": "几",
+      "pinyin": "jǐ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c23",
+      "type": "writing",
+      "strokes": 2,
+      "strokeOrder": [
+        "撇",
+        "横折弯钩"
+      ],
+      "words": [
+        "几个",
+        "几天",
+        "几人"
+      ],
+      "meaning": "询问数量",
+      "mnemonic": "撇横折弯钩几字，几个几年",
+      "order": 114
+    },
+    "g1s_115": {
+      "id": "g1s_115",
+      "char": "只",
+      "pinyin": "zhǐ",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c24",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "横",
+        "撇",
+        "点"
+      ],
+      "words": [
+        "只有",
+        "只是",
+        "一只"
+      ],
+      "meaning": "仅仅",
+      "mnemonic": "口+八",
+      "order": 115
+    },
+    "g1s_116": {
+      "id": "g1s_116",
+      "char": "石",
+      "pinyin": "shí",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c24",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "横",
+        "撇",
+        "竖",
+        "横折",
+        "横"
+      ],
+      "words": [
+        "石头",
+        "石子",
+        "石桥"
+      ],
+      "meaning": "石头",
+      "mnemonic": "厂字下面一口",
+      "order": 116
+    },
+    "g1s_117": {
+      "id": "g1s_117",
+      "char": "多",
+      "pinyin": "duō",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c24",
+      "type": "writing",
+      "strokes": 6,
+      "strokeOrder": [
+        "撇",
+        "横撇",
+        "点",
+        "撇",
+        "横撇",
+        "点"
+      ],
+      "words": [
+        "多少",
+        "很多",
+        "多好"
+      ],
+      "meaning": "数量大",
+      "mnemonic": "夕夕叠在一起多，多多益善",
+      "order": 117
+    },
+    "g1s_118": {
+      "id": "g1s_118",
+      "char": "出",
+      "pinyin": "chū",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c24",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "竖折",
+        "竖",
+        "竖",
+        "竖折",
+        "竖"
+      ],
+      "words": [
+        "出去",
+        "出门",
+        "出力"
+      ],
+      "meaning": "从里面到外面",
+      "mnemonic": "山字上下出出门，出人头地",
+      "order": 118
+    },
+    "g1s_119": {
+      "id": "g1s_119",
+      "char": "见",
+      "pinyin": "jiàn",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c24",
+      "type": "writing",
+      "strokes": 4,
+      "strokeOrder": [
+        "竖",
+        "横折",
+        "撇",
+        "竖弯钩"
+      ],
+      "words": [
+        "看见",
+        "见面",
+        "见到"
+      ],
+      "meaning": "看到",
+      "mnemonic": "目字下面一撇",
+      "order": 119
+    },
+    "g1s_120": {
+      "id": "g1s_120",
+      "char": "对",
+      "pinyin": "duì",
+      "grade": 1,
+      "semester": 1,
+      "courseId": "g1s_c24",
+      "type": "writing",
+      "strokes": 5,
+      "strokeOrder": [
+        "横撇",
+        "点",
+        "横",
+        "竖钩",
+        "点"
+      ],
+      "words": [
+        "对错",
+        "不对",
+        "对话"
+      ],
+      "meaning": "正确",
+      "mnemonic": "又字旁加寸字对，对答如流",
+      "order": 120
+    }
+  }
+}
