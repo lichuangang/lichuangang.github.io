@@ -1,0 +1,20 @@
+{
+  "latestVersion": "1.0.0",
+  "versions": [
+    {
+      "version": "1.0.0",
+      "buildNumber": 1,
+      "releaseDate": "2026-04-02",
+      "minAppVersion": "1.0.0",
+      "releaseNotes": [
+        "初始版本",
+        "包含人教版小学1-6年级诗词",
+        "包含150+常用汉字"
+      ],
+      "stats": {
+        "poemCount": 60,
+        "characterCount": 150
+      }
+    }
+  ]
+}

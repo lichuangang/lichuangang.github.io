@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>小学语文课程资源管理系统</title>
+  <link rel="stylesheet" href="/css/admin.css">
+</head>
+<body>
+<div id="app">
+  <!-- 顶部导航 -->
+  <div class="header">
+    <h1>📚 小学语文课程资源管理系统
+      <span v-if="adminVersions.currentVersion" style="font-size:14px;font-weight:400;background:#e6f7ff;color:#1890ff;padding:2px 10px;border-radius:12px;margin-left:12px">
+        📁 {{ adminVersions.currentVersion }}
+      </span>
+    </h1>
+    <div class="header-actions">
+      <span v-if="autoSaveStatus === 'saving'" style="color:#faad14;font-size:13px">⏳ 保存中...</span>
+      <span v-else-if="autoSaveStatus === 'saved'" style="color:#52c41a;font-size:13px">✅ 已保存</span>
+      <span v-else-if="autoSaveStatus === 'error'" style="color:#ff4d4f;font-size:13px">❌ 保存失败</span>
+      <button @click="refreshData">🔄 刷新</button>
+      <button class="btn-save" @click="saveCurrentData">💾 手动保存</button>
+    </div>
+  </div>
+
+  <!-- 布局 -->
+  <div class="layout">
+    <!-- 侧边栏 -->
+    <div class="sidebar">
+      <div class="sidebar-menu">
+        <div class="menu-group-title">总览</div>
+        <div class="menu-item" :class="{ active: currentView === 'dashboard' }"
+             @click="switchView('dashboard')">
+          📊 仪表盘
+        </div>
+
+        <div class="menu-group-title">课程管理</div>
+        <template v-for="grade in 6" :key="'g'+grade">
+          <div class="menu-item"
+               :class="{ active: currentView === 'curriculum' && selectedGrade === grade && selectedSemester === 1 }"
+               @click="loadCurriculum(grade, 1)">
+            {{ grade }}年级上册
+            <span class="badge" v-if="getSummary(grade,1)">{{ getSummary(grade,1).courseCount }}课</span>
+          </div>
+          <div class="menu-item"
+               :class="{ active: currentView === 'curriculum' && selectedGrade === grade && selectedSemester === 2 }"
+               @click="loadCurriculum(grade, 2)">
+            {{ grade }}年级下册
+            <span class="badge" v-if="getSummary(grade,2)">{{ getSummary(grade,2).courseCount }}课</span>
+          </div>
+        </template>
+
+        <div class="menu-group-title">资源管理</div>
+        <div class="menu-item" :class="{ active: currentView === 'characters' }"
+             @click="switchView('characters')">
+          ✏️ 生字库
+          <span class="badge">{{ charactersData.characters ? charactersData.characters.length : 0 }}</span>
+        </div>
+        <div class="menu-item" :class="{ active: currentView === 'poems' }"
+             @click="switchView('poems')">
+          📜 古诗文
+          <span class="badge">{{ poemsData.poems ? poemsData.poems.length : 0 }}</span>
+        </div>
+        <div class="menu-item" :class="{ active: currentView === 'versions' }"
+             @click="switchView('versions')">
+          🏷️ 版本管理
+        </div>
+      </div>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="main-content">
+      <!-- 仪表盘 -->
+      <template v-if="currentView === 'dashboard'">
+        <h2 style="margin-bottom: 20px;">系统概览</h2>
+        <div class="dashboard-grid">
+          <div class="stat-card">
+            <div class="stat-value">{{ summaryList.length }}</div>
+            <div class="stat-label">课程文件数</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">{{ totalCourses }}</div>
+            <div class="stat-label">总课程数</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">{{ totalChars }}</div>
+            <div class="stat-label">课程生字数</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">{{ charactersData.characters ? charactersData.characters.length : 0 }}</div>
+            <div class="stat-label">生字库总数</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">{{ poemsData.poems ? poemsData.poems.length : 0 }}</div>
+            <div class="stat-label">古诗文总数</div>
+          </div>
+        </div>
+        <div class="card" style="margin-top: 24px;">
+          <div class="card-header"><h3>各年级概要</h3></div>
+          <div class="card-body">
+            <table class="data-table">
+              <thead><tr><th>年级</th><th>学期</th><th>课程数</th><th>生字数</th><th>版本</th><th>操作</th></tr></thead>
+              <tbody>
+                <tr v-for="s in summaryList" :key="s.grade+'-'+s.semester">
+                  <td>{{ s.grade }}年级</td>
+                  <td>{{ s.semester === 1 ? '上册' : '下册' }}</td>
+                  <td>{{ s.courseCount }}</td>
+                  <td>{{ s.characterCount }}</td>
+                  <td>{{ s.version }}</td>
+                  <td><button class="btn btn-sm btn-primary" @click="loadCurriculum(s.grade, s.semester)">管理</button></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <!-- 课程管理 -->
+      <template v-if="currentView === 'curriculum'">
+        <div class="breadcrumb">首页 / 课程管理 / <span>{{ selectedGrade }}年级{{ selectedSemester === 1 ? '上册' : '下册' }}</span></div>
+        <div class="card">
+          <div class="card-header">
+            <h3>课程列表（{{ curriculumData.courses ? curriculumData.courses.length : 0 }} 课）</h3>
+            <button class="btn btn-primary btn-sm" @click="addCourse">+ 添加课程</button>
+          </div>
+          <div class="card-body">
+            <table class="data-table" v-if="curriculumData.courses && curriculumData.courses.length">
+              <thead>
+                <tr><th style="width:60px">序号</th><th>标题</th><th>副标题</th><th style="width:80px">生字数</th><th style="width:150px">操作</th></tr>
+              </thead>
+              <tbody>
+                <tr v-for="(course, idx) in curriculumData.courses" :key="course.id">
+                  <td>{{ course.courseNumber }}</td>
+                  <td style="font-weight:600">{{ course.title }}</td>
+                  <td style="color:#999">{{ course.subtitle || '-' }}</td>
+                  <td>{{ course.charIds ? course.charIds.length : 0 }}</td>
+                  <td>
+                    <button class="btn btn-sm btn-primary" @click="selectCourse(idx)">编辑</button>
+                    <button class="btn btn-sm" @click="moveCourse(idx, -1)" :disabled="idx === 0">↑</button>
+                    <button class="btn btn-sm" @click="moveCourse(idx, 1)" :disabled="idx === curriculumData.courses.length - 1">↓</button>
+                    <button class="btn btn-sm btn-danger" @click="deleteCourse(idx)">删除</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            <div v-else class="empty-state">
+              <div class="icon">📖</div>
+              <p>暂无课程，点击上方按钮添加</p>
+            </div>
+          </div>
+        </div>
+      </template>
+
+      <!-- 古诗文管理 -->
+      <template v-if="currentView === 'poems'">
+        <div class="breadcrumb">首页 / <span>古诗文管理</span></div>
+        <div class="card">
+          <div class="card-header">
+            <h3>古诗文列表（{{ filteredPoems.length }} 首）</h3>
+            <button class="btn btn-primary btn-sm" @click="addPoem">+ 添加古诗</button>
+          </div>
+          <div class="card-body">
+            <div class="filter-bar">
+              <select v-model.number="poemFilterGrade">
+                <option :value="0">全部年级</option>
+                <option v-for="g in 6" :key="g" :value="g">{{ g }}年级</option>
+              </select>
+              <select v-model.number="poemFilterSemester">
+                <option :value="0">全部学期</option>
+                <option :value="1">上册</option>
+                <option :value="2">下册</option>
+              </select>
+              <div class="search-box" style="flex:1;margin-bottom:0">
+                <input type="text" v-model="poemSearch" placeholder="搜索标题、作者...">
+              </div>
+            </div>
+            <table class="data-table">
+              <thead><tr><th>标题</th><th>作者</th><th>朝代</th><th>年级</th><th>学期</th><th>难度</th><th>操作</th></tr></thead>
+              <tbody>
+                <tr v-for="(poem, pi) in filteredPoems" :key="poem.id">
+                  <td>{{ poem.title }}</td>
+                  <td>{{ poem.author }}</td>
+                  <td>{{ poem.dynasty }}</td>
+                  <td>{{ poem.grade }}年级</td>
+                  <td>{{ poem.semester === 1 ? '上册' : '下册' }}</td>
+                  <td>{{ poem.difficulty }}</td>
+                  <td>
+                    <button class="btn btn-sm btn-primary" @click.stop="selectPoem(pi)">编辑</button>
+                    <button class="btn btn-sm btn-danger" @click.stop="deletePoem(pi)">删除</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <!-- 生字库管理 -->
+      <template v-if="currentView === 'characters'">
+        <div class="breadcrumb">首页 / <span>生字库管理</span></div>
+        <div class="card">
+          <div class="card-header">
+            <h3>生字库（{{ filteredCharLib.length }} 字）</h3>
+            <button class="btn btn-primary btn-sm" @click="addCharToLib">+ 添加生字</button>
+          </div>
+          <div class="card-body">
+            <div class="search-box">
+              <input type="text" v-model="charLibSearch" placeholder="搜索汉字、拼音、释义...">
+            </div>
+            <table class="data-table">
+              <thead><tr><th>汉字</th><th>拼音</th><th>释义</th><th>笔画</th><th>需会写</th><th>组词</th><th>操作</th></tr></thead>
+              <tbody>
+                <tr v-for="(ch, ci) in filteredCharLib" :key="ci">
+                  <td style="font-size:20px;font-weight:600">{{ ch.char }}</td>
+                  <td style="color:#e74c3c">{{ ch.pinyin }}</td>
+                  <td>{{ ch.meaning }}</td>
+                  <td>{{ ch.strokes }}</td>
+                  <td>{{ ch.requiresWriting ? '是' : '否' }}</td>
+                  <td>{{ ch.words ? ch.words.join('、') : '' }}</td>
+                  <td>
+                    <button class="btn btn-sm btn-primary" @click.stop="selectCharLib(ci)">编辑</button>
+                    <button class="btn btn-sm btn-danger" @click.stop="deleteCharFromLib(ci)">删除</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+
+      <!-- 版本管理 -->
+      <template v-if="currentView === 'versions'">
+        <div class="breadcrumb">首页 / <span>版本管理</span></div>
+
+        <!-- 版本目录切换 -->
+        <div class="card">
+          <div class="card-header">
+            <h3>📂 版本目录（当前：<span style="color:#1890ff">{{ adminVersions.currentVersion }}</span>）</h3>
+          </div>
+          <div class="card-body">
+            <table class="data-table">
+              <thead><tr><th>目录名称</th><th>文件数</th><th>修改时间</th><th>状态</th><th style="width:200px">操作</th></tr></thead>
+              <tbody>
+                <tr v-for="v in adminVersions.versions" :key="v.name"
+                    :style="v.isCurrent ? 'background:#e6f7ff' : ''">
+                  <td style="font-weight:600">📁 {{ v.name }}</td>
+                  <td>{{ v.fileCount }} 个 JSON</td>
+                  <td>{{ new Date(v.modifiedAt).toLocaleString() }}</td>
+                  <td>
+                    <span v-if="v.isCurrent" style="color:#52c41a;font-weight:600">✅ 当前使用</span>
+                    <span v-else style="color:#999">未激活</span>
+                  </td>
+                  <td>
+                    <button class="btn btn-sm btn-primary" v-if="!v.isCurrent" @click="doSwitchVersion(v.name)">切换使用</button>
+                    <button class="btn btn-sm" v-if="v.isCurrent" disabled>当前版本</button>
+                    <button class="btn btn-sm" @click="openCopyModal(v.name)">📋 复制</button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- 当前版本详情 (versions.json) -->
+        <div class="card" style="margin-top:20px">
+          <div class="card-header">
+            <h3>🏷️ 当前版本发布信息（versions.json）</h3>
+          </div>
+          <div class="card-body">
+            <div class="form-grid">
+              <div class="form-group">
+                <label>最新版本号</label>
+                <input type="text" v-model="versionsData.latestVersion">
+              </div>
+            </div>
+            <table class="data-table" style="margin-top: 20px">
+              <thead><tr><th>版本</th><th>构建号</th><th>发布日期</th><th>最低APP版本</th><th>诗词数</th><th>生字数</th></tr></thead>
+              <tbody>
+                <tr v-for="(v, vi) in versionsData.versions" :key="vi">
+                  <td><input type="text" v-model="v.version" style="width:80px;padding:4px 8px;border:1px solid #d9d9d9;border-radius:4px"></td>
+                  <td><input type="number" v-model.number="v.buildNumber" style="width:60px;padding:4px 8px;border:1px solid #d9d9d9;border-radius:4px"></td>
+                  <td><input type="date" v-model="v.releaseDate" style="padding:4px 8px;border:1px solid #d9d9d9;border-radius:4px"></td>
+                  <td><input type="text" v-model="v.minAppVersion" style="width:80px;padding:4px 8px;border:1px solid #d9d9d9;border-radius:4px"></td>
+                  <td><input type="number" v-model.number="v.stats.poemCount" style="width:60px;padding:4px 8px;border:1px solid #d9d9d9;border-radius:4px"></td>
+                  <td><input type="number" v-model.number="v.stats.characterCount" style="width:60px;padding:4px 8px;border:1px solid #d9d9d9;border-radius:4px"></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </template>
+    </div>
+  </div>
+
+  <!-- ============ 弹窗区域 ============ -->
+
+  <!-- 课程编辑弹窗 -->
+  <div class="modal-overlay" v-if="selectedCourseIdx !== null && editingCourse" @click.self="closeCourseModal">
+    <div class="modal modal-lg">
+      <div class="modal-header">
+        <h3>📝 编辑课程：{{ editingCourse.title }}</h3>
+        <button class="close-btn" @click="closeCourseModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>课程编号</label>
+            <input type="number" v-model.number="editingCourse.courseNumber" min="1">
+          </div>
+          <div class="form-group">
+            <label>标题</label>
+            <input type="text" v-model="editingCourse.title">
+          </div>
+          <div class="form-group">
+            <label>副标题</label>
+            <input type="text" v-model="editingCourse.subtitle" placeholder="可选">
+          </div>
+          <div class="form-group">
+            <label>课程ID</label>
+            <input type="text" v-model="editingCourse.id" readonly style="background:#f5f5f5">
+          </div>
+        </div>
+        <!-- 本课生字 -->
+        <div style="margin-top:20px;display:flex;align-items:center;justify-content:space-between">
+          <h4>本课生字（{{ editingCourseChars.length }} 个）</h4>
+          <button class="btn btn-sm btn-primary" @click="showAddCharModal = true">+ 添加生字</button>
+        </div>
+        <div class="char-grid" v-if="editingCourseChars.length" style="margin-top:12px">
+          <div class="char-card"
+               v-for="(ch, ci) in editingCourseChars" :key="ch.id"
+               @click="selectChar(ci)">
+            <div class="char-display">{{ ch.char }}</div>
+            <div class="char-pinyin">{{ ch.pinyin }}</div>
+            <div class="char-strokes">{{ ch.strokes }}画 · {{ ch.type === 'writing' ? '写' : '认' }}</div>
+          </div>
+        </div>
+        <div v-else class="empty-state" style="padding:20px"><p>本课暂无生字</p></div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" @click="closeCourseModal">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 课程内生字编辑弹窗 -->
+  <div class="modal-overlay" v-if="selectedCharIdx !== null && editingChar" @click.self="selectedCharIdx = null">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>编辑生字：<span style="font-size:28px">{{ editingChar.char }}</span></h3>
+        <button class="close-btn" @click="selectedCharIdx = null">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>汉字</label>
+            <input type="text" v-model="editingChar.char" maxlength="1">
+          </div>
+          <div class="form-group">
+            <label>拼音</label>
+            <input type="text" v-model="editingChar.pinyin">
+          </div>
+          <div class="form-group">
+            <label>笔画数</label>
+            <input type="number" v-model.number="editingChar.strokes" min="1">
+          </div>
+          <div class="form-group">
+            <label>类型</label>
+            <select v-model="editingChar.type">
+              <option value="writing">会写字</option>
+              <option value="reading">会认字</option>
+            </select>
+          </div>
+          <div class="form-group form-group-full">
+            <label>释义</label>
+            <input type="text" v-model="editingChar.meaning">
+          </div>
+          <div class="form-group form-group-full">
+            <label>记忆口诀</label>
+            <input type="text" v-model="editingChar.mnemonic" placeholder="可选">
+          </div>
+          <div class="form-group form-group-full">
+            <label>笔顺（逗号分隔）</label>
+            <input type="text" :value="editingChar.strokeOrder ? editingChar.strokeOrder.join(',') : ''"
+                   @input="updateStrokeOrder($event.target.value)">
+          </div>
+          <div class="form-group form-group-full">
+            <label>组词（逗号分隔）</label>
+            <input type="text" :value="editingChar.words ? editingChar.words.join(',') : ''"
+                   @input="updateWords($event.target.value)">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" @click="deleteCharFromCourse">从本课移除</button>
+        <button class="btn btn-primary" @click="selectedCharIdx = null">确定</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 添加生字弹窗 - 从生字库选择 -->
+  <div class="modal-overlay" v-if="showAddCharModal" @click.self="closeAddCharModal">
+    <div class="modal modal-lg">
+      <div class="modal-header">
+        <h3>从生字库选择生字添加到本课</h3>
+        <button class="close-btn" @click="closeAddCharModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- 搜索栏 -->
+        <div class="search-box" style="margin-bottom:12px">
+          <input type="text" v-model="addCharSearch" placeholder="输入汉字或拼音搜索生字库...">
+        </div>
+
+        <!-- 搜索结果列表 -->
+        <div v-if="addCharSearchResults.length" style="max-height:220px;overflow-y:auto;border:1px solid #e8e8e8;border-radius:6px">
+          <table class="data-table" style="margin:0">
+            <thead><tr><th style="width:50px">汉字</th><th>拼音</th><th>释义</th><th>笔画</th><th style="width:70px">操作</th></tr></thead>
+            <tbody>
+              <tr v-for="ch in addCharSearchResults" :key="ch.char"
+                  :style="pickedLibChar && pickedLibChar.char === ch.char ? 'background:#e6f7ff' : ''">
+                <td style="font-size:22px;font-weight:600">{{ ch.char }}</td>
+                <td style="color:#e74c3c">{{ ch.pinyin }}</td>
+                <td>{{ ch.meaning }}</td>
+                <td>{{ ch.strokes }}</td>
+                <td><button class="btn btn-sm btn-primary" @click="pickLibChar(ch)"
+                            :disabled="isCharInCourse(ch.char)">
+                      {{ isCharInCourse(ch.char) ? '已添加' : '选择' }}
+                    </button></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div v-else-if="addCharSearch" style="text-align:center;padding:24px;color:#999">
+          <p>生字库中未找到「{{ addCharSearch }}」</p>
+          <p style="margin-top:8px;font-size:13px">请先到 <strong>生字库管理</strong> 中添加该字，然后再回来选择</p>
+        </div>
+        <div v-else style="text-align:center;padding:24px;color:#999">
+          <p>请输入汉字或拼音搜索</p>
+        </div>
+
+        <!-- 已选中的生字信息 -->
+        <div v-if="pickedLibChar" style="margin-top:16px;padding:16px;background:#f6ffed;border:1px solid #b7eb8f;border-radius:8px">
+          <div style="display:flex;align-items:center;gap:16px;margin-bottom:12px">
+            <span style="font-size:42px;font-weight:600">{{ pickedLibChar.char }}</span>
+            <div>
+              <div style="color:#e74c3c;font-size:16px">{{ pickedLibChar.pinyin }}</div>
+              <div style="color:#666;font-size:13px">{{ pickedLibChar.meaning }}</div>
+              <div style="color:#999;font-size:12px">{{ pickedLibChar.strokes }}画 | {{ pickedLibChar.requiresWriting ? '需会写' : '会认即可' }}</div>
+            </div>
+          </div>
+          <div v-if="pickedLibChar.words && pickedLibChar.words.length" style="font-size:13px;color:#666">
+            <strong>组词：</strong>{{ pickedLibChar.words.join('、') }}
+          </div>
+          <div v-if="pickedLibChar.mnemonic" style="font-size:13px;color:#666;margin-top:4px">
+            <strong>口诀：</strong>{{ pickedLibChar.mnemonic }}
+          </div>
+          <!-- 类型选择 -->
+          <div style="margin-top:12px;display:flex;align-items:center;gap:12px">
+            <label style="font-size:13px;color:#666;font-weight:500">添加为：</label>
+            <select v-model="pickedCharType" style="padding:4px 12px;border:1px solid #d9d9d9;border-radius:4px">
+              <option value="writing">会写字</option>
+              <option value="reading">会认字</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" @click="closeAddCharModal">取消</button>
+        <button class="btn btn-primary" @click="confirmAddCharFromLib" :disabled="!pickedLibChar">确定添加</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 古诗文编辑弹窗 -->
+  <div class="modal-overlay" v-if="editingPoem" @click.self="selectedPoemIdx = null">
+    <div class="modal modal-lg">
+      <div class="modal-header">
+        <h3>📜 编辑古诗：{{ editingPoem.title }}</h3>
+        <button class="close-btn" @click="selectedPoemIdx = null">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>ID</label>
+            <input type="text" v-model="editingPoem.id">
+          </div>
+          <div class="form-group">
+            <label>标题</label>
+            <input type="text" v-model="editingPoem.title">
+          </div>
+          <div class="form-group">
+            <label>作者</label>
+            <input type="text" v-model="editingPoem.author">
+          </div>
+          <div class="form-group">
+            <label>朝代</label>
+            <input type="text" v-model="editingPoem.dynasty">
+          </div>
+          <div class="form-group">
+            <label>年级</label>
+            <select v-model.number="editingPoem.grade">
+              <option v-for="g in 6" :key="g" :value="g">{{ g }}年级</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>学期</label>
+            <select v-model.number="editingPoem.semester">
+              <option :value="1">上册</option>
+              <option :value="2">下册</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>难度</label>
+            <input type="number" v-model.number="editingPoem.difficulty" min="1" max="6">
+          </div>
+          <div class="form-group">
+            <label>等级</label>
+            <input type="number" v-model.number="editingPoem.level" min="1" max="6">
+          </div>
+          <div class="form-group form-group-full">
+            <label>内容</label>
+            <textarea v-model="editingPoem.content" rows="3"></textarea>
+          </div>
+          <div class="form-group form-group-full">
+            <label>译文</label>
+            <textarea v-model="editingPoem.translation" rows="3"></textarea>
+          </div>
+          <div class="form-group form-group-full">
+            <label>注释</label>
+            <textarea v-model="editingPoem.notes" rows="2"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" @click="selectedPoemIdx = null">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 生字库编辑弹窗 -->
+  <div class="modal-overlay" v-if="editingCharLib" @click.self="selectedCharLibIdx = null">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>✏️ 编辑生字：<span style="font-size:28px">{{ editingCharLib.char }}</span></h3>
+        <button class="close-btn" @click="selectedCharLibIdx = null">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group">
+            <label>汉字</label>
+            <input type="text" v-model="editingCharLib.char" maxlength="1">
+          </div>
+          <div class="form-group">
+            <label>拼音</label>
+            <input type="text" v-model="editingCharLib.pinyin">
+          </div>
+          <div class="form-group">
+            <label>释义</label>
+            <input type="text" v-model="editingCharLib.meaning">
+          </div>
+          <div class="form-group">
+            <label>笔画数</label>
+            <input type="number" v-model.number="editingCharLib.strokes" min="1">
+          </div>
+          <div class="form-group">
+            <label>需要会写</label>
+            <select v-model="editingCharLib.requiresWriting">
+              <option :value="true">是</option>
+              <option :value="false">否</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>记忆口诀</label>
+            <input type="text" v-model="editingCharLib.mnemonic" placeholder="可选">
+          </div>
+          <div class="form-group form-group-full">
+            <label>组词（逗号分隔）</label>
+            <input type="text" :value="editingCharLib.words ? editingCharLib.words.join(',') : ''"
+                   @input="updateCharLibWords($event.target.value)">
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" @click="selectedCharLibIdx = null">关闭</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 复制版本弹窗 -->
+  <div class="modal-overlay" v-if="showCopyModal" @click.self="closeCopyModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h3>📋 复制版本</h3>
+        <button class="close-btn" @click="closeCopyModal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="form-grid">
+          <div class="form-group form-group-full">
+            <label>源版本</label>
+            <input type="text" :value="copySource" readonly style="background:#f5f5f5">
+          </div>
+          <div class="form-group form-group-full">
+            <label>新版本名称</label>
+            <input type="text" v-model="copyTarget" placeholder="如 v1.1.0">
+          </div>
+        </div>
+        <div style="margin-top:12px;padding:12px;background:#fffbe6;border:1px solid #ffe58f;border-radius:6px;font-size:13px;color:#d48806">
+          ⚠️ 将把 <strong>{{ copySource }}</strong> 目录下的所有文件复制到新目录 <strong>{{ copyTarget }}</strong>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn" @click="closeCopyModal">取消</button>
+        <button class="btn btn-primary" @click="doCopyVersion">确定复制</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 通知 -->
+  <div class="toast" :class="'toast-' + toast.type" v-if="toast.show">{{ toast.message }}</div>
+</div>
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+<script src="/js/api.js"></script>
+<script src="/js/app.js"></script>
+</body>
+</html>
